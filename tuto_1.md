@@ -48,7 +48,7 @@ Il vaut mieux éviter les accents et certains caractères spéciaux.
 
 ➡️ Écris ton prénom avec au moins un caractère spécial. 
 
-➡️ ** à â ä é è ï ù **
+⌨️ ** à â ä é è ï ù **
 
 ➡️ Observe ton prénom défiler **sur le simulateur**. 
 
@@ -64,17 +64,19 @@ basic.forever(function () {
 
 ➡️ Écris correctement ton prénom sans caractères spéciaux.
 
-🖥️ Est-ce que ton prénom s'affiche correctement sur le simulateur ?
-
-💾 Télécharge la programmation.
+🖥️ Vérifie que ton prénom s'affiche correctement sur le simulateur.
 
 ## Étape 5
 
-➡️ Observe ton prénom défiler fièrement sur l'écran du micro:bit. 
+💾 Télécharge la programmation.
 
 ## Étape 6
 
-🧠 **Défi supplémentaire**. 🧠
+➡️ Observe ton prénom défiler sur l'écran du micro:bit. 
+
+## Étape 7
+
+🧠 **Défi supplémentaire** 🧠
 
 ➡️ Fais défiler également ton nom de famille en ajoutant un bloc ``|| basic: Hello! ||``.
 
