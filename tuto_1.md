@@ -1,92 +1,103 @@
-# Tutoriel 1
+# Tutoriel 1 — Afficher mon prénom
 
 ## @showdialog
 
-🎯 **Objectif** 🎯 : fais défiler ton prénom en boucle sur l'écran du micro:bit ! 
+🎯 **Objectif** : fais défiler ton prénom en boucle sur l'écran du micro:bit !
 
-C'est parti ! 🚀 🚀 🚀
+Dans ce tutoriel, tu vas apprendre à utiliser le bloc **afficher texte** pour personnaliser l'affichage de ton micro:bit.
 
-## Étape 1
+C'est parti ! 🚀
 
-✨ Ajoute un bloc !
+## Étape 1 — Ajouter un bloc
 
-➡️ Ajoute le bloc ``|| basic: afficher texte ||`` dans le bloc ``||basic: toujours||``.
+✨ Ajoute un bloc à ton programme !
+
+➡️ Glisse le bloc ``||basic:afficher texte||`` à l'intérieur du bloc ``||basic:toujours||``.
+
+💡 Le bloc **toujours** répète son contenu en boucle indéfiniment. Ton prénom défilera donc sans arrêt !
 
 ```blocks
-
 basic.forever(function () {
     basic.showString("Hello!")
 })
-
 ```
 
-## Étape 2
+## Étape 2 — Écrire mon prénom
 
-✏️ Modifie les valeurs !
+✏️ Remplace le texte par défaut !
 
-➡️ Efface le mot ``|| basic: Hello! ||`` du bloc ``|| basic: afficher texte ||``.
+➡️ Efface le mot ``Hello!`` dans le bloc ``||basic:afficher texte||``.
 
-➡️ Écris ton prénom dans le bloc ``|| basic: afficher texte ||`` (ex. : Seb). 
+➡️ Écris ton prénom à la place (ex. : `Seb`).
 
 ```blocks
-
 basic.forever(function () {
-    basic.showString("Seb") 
+    basic.showString("Seb")
 })
-
 ```
 
 ## @showdialog
 
-🚨🚨 **Attention !** 🚨🚨
+⚠️ **Attention aux accents !**
 
-Il vaut mieux éviter les accents et certains caractères spéciaux.
+Le micro:bit ne sait pas toujours afficher correctement les lettres accentuées et certains caractères spéciaux.
 
-## Étape 3
+Il vaut mieux les éviter pour avoir un affichage propre !
 
-✏️ Modifie les valeurs !
+## Étape 3 — Tester les caractères spéciaux
 
-➡️ Écris ton prénom avec au moins un caractère spécial. 
+🔬 Fais une petite expérience !
 
-⌨️ ** à â ä é è ï ù **
+➡️ Écris ton prénom **avec** au moins un caractère spécial : `à â ä é è ï ù`
 
-➡️ Observe ton prénom défiler **sur le simulateur**. 
+➡️ Observe le résultat sur le **simulateur**.
 
 ```blocks
-
 basic.forever(function () {
-    basic.showString("Seb") 
+    basic.showString("Séb")
 })
-
 ```
 
-## Étape 4
+## Étape 4 — Corriger l'affichage
 
-➡️ Écris correctement ton prénom sans caractères spéciaux.
+✅ Reviens à un affichage correct !
 
-🖥️ Vérifie que ton prénom s'affiche correctement sur le simulateur.
+➡️ Réécris ton prénom **sans** caractères spéciaux ni accents.
 
-## Étape 5
-
-💾 Télécharge la programmation.
-
-## Étape 6
-
-➡️ Observe ton prénom défiler sur l'écran du micro:bit. 
-
-## Étape 7
-
-🧠 **Défi supplémentaire** 🧠
-
-➡️ Fais défiler également ton nom de famille en ajoutant un bloc ``|| basic: Hello! ||``.
-
-Prêt ? C'est parti ! 🚀 🚀 🚀
+➡️ Vérifie sur le **simulateur** que ton prénom s'affiche bien.
 
 ```blocks
-
 basic.forever(function () {
     basic.showString("Seb")
-    basic.showString("Bergeron")  
 })
-
 ```
+
+## Étape 5 — Télécharger le programme
+
+💾 Envoie ton programme sur le micro:bit !
+
+➡️ Clique sur le bouton **Télécharger** pour transférer ton programme.
+
+## Étape 6 — Observer le résultat
+
+👀 Regarde ton micro:bit !
+
+➡️ Observe ton prénom défiler sur l'écran de ton micro:bit.
+
+> 🎉 Si tout fonctionne bien, félicitations ! Tu viens de créer ton premier programme personnalisé.
+
+## Étape 7 — Défi supplémentaire 🧠
+
+Tu veux aller plus loin ?
+
+➡️ Ajoute un deuxième bloc ``||basic:afficher texte||`` pour faire défiler aussi ton **nom de famille** après ton prénom.
+
+> 💡 Les deux blocs s'exécuteront l'un après l'autre, en boucle.
+```blocks
+basic.forever(function () {
+    basic.showString("Seb")
+    basic.showString("Bergeron")
+})
+```
+
+🚀 Bravo, tu maîtrises maintenant l'affichage de texte sur le micro:bit !
