@@ -17,6 +17,7 @@ C'est parti ! 🚀
 ➡️ Clique sur l'icône dans le bloc pour choisir celle que tu préfères.
 
 > 💡 Appuie sur la flèche ⬇️ pour voir toutes les icônes disponibles !
+
 ```blocks
 basic.forever(function () {
     basic.showIcon(IconNames.Heart)

@@ -14,7 +14,7 @@ C'est parti ! 🚀
 
 ➡️ Glisse le bloc ``||basic:afficher texte||`` à l'intérieur du bloc ``||basic:toujours||``.
 
-💡 Le bloc **toujours** répète son contenu en boucle indéfiniment. Ton prénom défilera donc sans arrêt !
+> 💡 Le bloc **toujours** répète son contenu en boucle indéfiniment. Ton prénom défilera donc sans arrêt !
 
 ```blocks
 basic.forever(function () {
