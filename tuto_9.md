@@ -105,7 +105,7 @@ input.onButtonPressed(Button.A, function () {
 
 ➡️ Sous la boucle, glisse le bloc ``||basic:montrer l'icône||`` et choisis l'icône de ton choix.
 
-➡️ Glisse ensuite le bloc ``||basic:afficher texte||`` et écris `"Termine !"`.
+➡️ Glisse ensuite le bloc ``||basic:afficher texte||`` et écris `"Termine!"`.
 
 > 💡 Quand la boucle se termine, le micro:bit sait que le temps est écoulé — il affiche une icône et un message pour signaler la fin !
 ```blocks
@@ -177,8 +177,34 @@ input.onButtonPressed(Button.B, function () {
 
 **Défi avancé :**
 
-➡️ Ajoute une condition pour afficher une icône d'avertissement ⚠️ quand il reste `3` secondes ou moins.
+**Défi avancé :**
 
-> 💡 Tu devras ajouter un bloc ``||logic:si vrai alors||`` à l'intérieur de la boucle avec la condition `temps ≤ 3` !
+➡️ Ajoute une condition pour afficher une icône d'avertissement quand il reste `3` secondes ou moins.
 
-🚀 Bravo ! Tu sais maintenant utiliser une boucle pour faire évoluer une variable automatiquement !
+➡️ Glisse un bloc ``||logic:si vrai alors||`` à l'intérieur de la boucle, après le bloc ``||basic:afficher nombre||``.
+
+➡️ Dans la case de la condition, glisse le bloc de comparaison ``||logic:0 ≤ 0||``.
+
+➡️ Dans la partie gauche, insère la variable `temps`. Dans la partie droite, écris `3`.
+
+➡️ À l'intérieur de la condition, glisse le bloc ``||basic:montrer l'icône||`` et choisis l'icône d'avertissement.
+
+```blocks
+let temps = 10
+input.onButtonPressed(Button.A, function () {
+    basic.showNumber(temps)
+    for (let index = 0; index < 10; index++) {
+        basic.pause(1000)
+        temps += -1
+        basic.showNumber(temps)
+        if (temps <= 3) {
+            basic.showIcon(IconNames.Warning)
+            basic.pause(300)
+        }
+    }
+    basic.showIcon(IconNames.Yes)
+    basic.showString("Termine !")
+})
+```
+
+> ❓ Que se passe-t-il si tu changes la valeur `3` par `5` ? Et par `1` ?

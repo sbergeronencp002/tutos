@@ -19,7 +19,12 @@
         "tuto_6.md",
         "tuto_7.md",
         "tuto_8.md",
-        "tuto_9.md"
+        "tuto_9.md",
+        "tuto_10.md",
+        "tuto_11.md",
+        "tuto_12.md",
+        "tuto_13.md",
+        "tuto_14.md"
     ],
     "testFiles": [
         "test.ts"

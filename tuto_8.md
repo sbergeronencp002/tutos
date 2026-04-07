@@ -165,8 +165,86 @@ input.onGesture(Gesture.Shake, function () {
 
 **Défi avancé :**
 
-➡️ Ajoute une animation de "lancer" avant d'afficher le résultat : fais défiler rapidement plusieurs icônes aléatoires avec une boucle ``||loops:répéter||`` et des pauses courtes, puis affiche la face finale.
+➡️ Ajoute une animation de "lancer" avant d'afficher le résultat.
 
-> 💡 Tu peux utiliser le bloc ``||basic:montrer l'icône||`` avec des icônes variées pour simuler le mouvement du dé !
+➡️ Glisse un bloc ``||loops:répéter 4 fois||`` au début de la séquence ``||input:lorsque secouer||``, avant les conditions.
 
-🚀 Bravo ! Tu maîtrises maintenant les conditions avec six cas différents !
+➡️ La valeur `4` demeure la même.
+
+➡️ À l'intérieur de la boucle, glisse le bloc ``||basic:montrer l'icône||`` et choisis trois icônes de ton choix.
+
+➡️ Glisse ensuite un bloc ``||basic:pause (ms) 100||`` après chaque icône.
+
+> 💡 La boucle fait défiler rapidement une icône avant d'afficher le résultat — ça simule le mouvement du dé qui roule !
+
+```blocks
+let face = 0
+input.onGesture(Gesture.Shake, function () {
+    face = Math.randomRange(1, 6)
+    for (let index = 0; index < 10; index++) {
+        basic.showIcon(IconNames.Square)
+        basic.pause(100)
+        basic.showIcon(IconNames.Diamond)
+        basic.pause(100)
+        basic.showIcon(IconNames.SmallDiamond)
+        basic.pause(100)
+    }
+    if (face == 1) {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . # . .
+            . . . . .
+            . . . . .
+            `)
+    }
+    if (face == 2) {
+        basic.showLeds(`
+            . . . . .
+            . # . . .
+            . . . . .
+            . . . # .
+            . . . . .
+            `)
+    }
+    if (face == 3) {
+        basic.showLeds(`
+            # . . . .
+            . . . . .
+            . . # . .
+            . . . . .
+            . . . . #
+            `)
+    }
+    if (face == 4) {
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . . . .
+            . # . # .
+            . . . . .
+            `)
+    }
+    if (face == 5) {
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . # . .
+            . # . # .
+            . . . . .
+            `)
+    }
+    if (face == 6) {
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . # . # .
+            . # . # .
+            . . . . .
+            `)
+    }
+})
+
+```
+
+> ❓ Que se passe-t-il si tu changes la valeur de la pause à `50` ? Et à `300` ?
