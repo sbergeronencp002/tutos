@@ -102,7 +102,7 @@ input.onGesture(Gesture.Shake, function () {
 
 ➡️ Teste la secousse sur le **simulateur** en cliquant sur le bouton **SHAKE** !
 
-> ❓ Est-ce bien l'animation que tu voulais ? Modifie les blocs si besoin.
+> ❓ Est-ce bien le comportement attendu ? Modifie les blocs au besoin.
 
 ## Étape 8 — Télécharger et tester
 
