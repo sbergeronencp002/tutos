@@ -26,15 +26,23 @@ C'est parti ! 🚀
 
 ➡️ Glisse le bloc ``||variables:définir combinaison à " "||`` à l'intérieur du bloc ``||basic:au démarrage||``.
 
-➡️ Écris `"AABB"` dans le bloc.
+```blocks
+let combinaison = ""
+```
 
-> 💡 La variable `combinaison` contient ta combinaison secrète. Tu pourras la changer plus tard !
+## Étape 3 — Définir la combinaison secrète
+
+➡️ Remplace la valeur du bloc ``||variables:définir combinaison||`` par le bloc ``||text:" "||`` depuis l'onglet **Texte**.
+
+➡️ Écris `AABB` dans le bloc ``||text:" "||``.
+
+> 💡 La variable `combinaison` contient maintenant ta combinaison secrète — `"AABB"` veut dire : appuie sur **A**, **A**, **B**, **B** dans cet ordre !
 
 ```blocks
 let combinaison = "AABB"
 ```
 
-## Étape 3 — Créer la variable entree
+## Étape 4 — Créer la variable entree
 
 ✨ Crée une deuxième variable !
 
@@ -53,7 +61,7 @@ let combinaison = "AABB"
 let entree = ""
 ```
 
-## Étape 4 — Message de démarrage
+## Étape 5 — Message de démarrage
 
 ✨ Ajoute un message de démarrage !
 
@@ -67,32 +75,33 @@ let entree = ""
 basic.showString("Pret !")
 ```
 
-## Étape 5 — Bouton A
+## Étape 6 — Bouton A : ajouter la lettre
 
 ✨ Ajoute une première séquence !
 
 ➡️ Glisse le bloc ``||variables:définir entree à " "||`` à l'intérieur du bloc ``||input:lorsque le bouton A est pressé||``.
 
-➡️ Remplace la valeur par `entree + "A"` en utilisant le bloc ``||text:joindre||``.
+➡️ Dans le bloc, insère le bloc ``||text:joindre " " " "||`` depuis l'onglet **Texte**.
 
-➡️ Glisse ensuite le bloc ``||basic:afficher texte||`` en dessous et écris `"A"`.
+➡️ Dans la partie gauche du bloc ``||text:joindre||``, insère la variable `entree`.
 
-> 💡 À chaque appui sur **A**, la lettre `"A"` est ajoutée à la fin de la variable `entree` !
+➡️ Dans la partie droite, écris `"A"`.
+
+> 💡 Le bloc **joindre** colle deux morceaux de texte ensemble — ici, il ajoute `"A"` à la fin de ce qui est déjà dans `entree` !
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
     entree = entree + "A"
-    basic.showString("A")
 })
 ```
 
-## Étape 6 — Bouton A : pause et effacement
+## Étape 7 — Bouton A : afficher, pause et effacement
 
-➡️ Glisse le bloc ``||basic:pause (ms) 100||`` sous le bloc ``||basic:afficher texte||``.
+➡️ Glisse le bloc ``||basic:afficher texte||`` sous le bloc ``||variables:définir entree||`` et écris `"A"`.
 
-➡️ Remplace la valeur par `500`.
+➡️ Glisse le bloc ``||basic:pause (ms) 100||`` en dessous et remplace la valeur par `500`.
 
-➡️ Glisse ensuite le bloc ``||basic:effacer l'écran||`` en dessous.
+➡️ Glisse enfin le bloc ``||basic:effacer l'écran||`` en dessous.
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -103,32 +112,33 @@ input.onButtonPressed(Button.A, function () {
 })
 ```
 
-## Étape 7 — Bouton B
+## Étape 8 — Bouton B : ajouter la lettre
 
 ✨ Ajoute une deuxième séquence !
 
 ➡️ Glisse le bloc ``||variables:définir entree à " "||`` à l'intérieur du bloc ``||input:lorsque le bouton B est pressé||``.
 
-➡️ Remplace la valeur par `entree + "B"` en utilisant le bloc ``||text:joindre||``.
+➡️ Dans le bloc, insère le bloc ``||text:joindre " " " "||`` depuis l'onglet **Texte**.
 
-➡️ Glisse ensuite le bloc ``||basic:afficher texte||`` en dessous et écris `"B"`.
+➡️ Dans la partie gauche du bloc ``||text:joindre||``, insère la variable `entree`.
 
-> 💡 À chaque appui sur **B**, la lettre `"B"` est ajoutée à la fin de la variable `entree` !
+➡️ Dans la partie droite, écris `"B"`.
+
+> 💡 Même principe qu'à l'étape précédente — cette fois, la lettre `"B"` est ajoutée à la fin de `entree` !
 
 ```blocks
 input.onButtonPressed(Button.B, function () {
     entree = entree + "B"
-    basic.showString("B")
 })
 ```
 
-## Étape 8 — Bouton B : pause et effacement
+## Étape 9 — Bouton B : afficher, pause et effacement
 
-➡️ Glisse le bloc ``||basic:pause (ms) 100||`` sous le bloc ``||basic:afficher texte||``.
+➡️ Glisse le bloc ``||basic:afficher texte||`` sous le bloc ``||variables:définir entree||`` et écris `"B"`.
 
-➡️ Remplace la valeur par `500`.
+➡️ Glisse le bloc ``||basic:pause (ms) 100||`` en dessous et remplace la valeur par `500`.
 
-➡️ Glisse ensuite le bloc ``||basic:effacer l'écran||`` en dessous.
+➡️ Glisse enfin le bloc ``||basic:effacer l'écran||`` en dessous.
 
 ```blocks
 input.onButtonPressed(Button.B, function () {
@@ -139,7 +149,7 @@ input.onButtonPressed(Button.B, function () {
 })
 ```
 
-## Étape 9 — Bouton A+B : préparer la vérification
+## Étape 10 — Bouton A+B : préparer la vérification
 
 ✨ Ajoute la séquence de vérification !
 
@@ -149,7 +159,7 @@ input.onButtonPressed(Button.B, function () {
 
 > 💡 On va remplir les deux conditions aux étapes suivantes !
 
-## Étape 10 — Condition : bonne combinaison ✅
+## Étape 11 — Condition : bonne combinaison ✅
 
 ✨ Remplis la première condition !
 
@@ -169,7 +179,7 @@ input.onButtonPressed(Button.AB, function () {
 })
 ```
 
-## Étape 11 — Condition : mauvaise combinaison ❌
+## Étape 12 — Condition : mauvaise combinaison ❌
 
 ✨ Remplis la deuxième condition !
 
@@ -192,7 +202,7 @@ input.onButtonPressed(Button.AB, function () {
 })
 ```
 
-## Étape 12 — Réinitialiser l'entrée
+## Étape 13 — Réinitialiser l'entrée
 
 ✨ Réinitialise la variable `entree` !
 
@@ -200,7 +210,7 @@ input.onButtonPressed(Button.AB, function () {
 
 ➡️ Laisse la valeur vide.
 
-> 💡 On réinitialise `entree` **après** les deux conditions — comme ça, peu importe le résultat, le coffre-fort est prêt pour une nouvelle tentative !
+> 💡 On réinitialise `entree` **après** les deux conditions — peu importe le résultat, le coffre-fort est prêt pour une nouvelle tentative !
 
 ```blocks
 input.onButtonPressed(Button.AB, function () {
@@ -214,7 +224,7 @@ input.onButtonPressed(Button.AB, function () {
 })
 ```
 
-## Étape 13 — Vérifier sur le simulateur
+## Étape 14 — Vérifier sur le simulateur
 
 🖥️ Observe le résultat avant de télécharger !
 
@@ -226,7 +236,7 @@ input.onButtonPressed(Button.AB, function () {
 
 > ❓ Est-ce que le coffre-fort s'ouvre avec la bonne combinaison ? Modifie les blocs au besoin.
 
-## Étape 14 — Télécharger et tester
+## Étape 15 — Télécharger et tester
 
 💾 Envoie ton programme sur le micro:bit !
 
@@ -234,7 +244,7 @@ input.onButtonPressed(Button.AB, function () {
 
 ➡️ Teste ta combinaison et fais deviner la combinaison à un ami !
 
-## Étape 15 — Question réflexive 🤔
+## Étape 16 — Question réflexive 🤔
 
 ❓ **Combien de combinaisons différentes sont possibles avec 4 lettres A et B ?**
 
@@ -242,7 +252,7 @@ input.onButtonPressed(Button.AB, function () {
 
 > 💡 Avec 4 lettres et 2 choix possibles (A ou B), il y a **16 combinaisons différentes** — l'ordre est crucial, ce qui rend le coffre-fort difficile à deviner !
 
-## Étape 16 — Défi supplémentaire 🧠
+## Étape 17 — Défi supplémentaire 🧠
 
 **Défi de base :**
 
