@@ -112,11 +112,15 @@ input.onGesture(Gesture.Shake, function () {
 
 ➡️ Secoue ton micro:bit et observe l'animation !
 
-## @showdialog
+## Étape 9 — Question réflexive 🤔
 
-🚀 Bravo ! Tu viens de créer ta première animation avec une boucle !
+❓ **Pourquoi rien ne s'affiche sur le micro:bit au démarrage ?**
 
-## Étape 9 — Défi supplémentaire 🧠
+❓ **Quelle action dois-tu réaliser pour déclencher l'animation ?**
+
+> 💡 Tu peux aussi tester la secousse sur le **simulateur** en cliquant sur le bouton **SHAKE** !
+
+## Étape 10 — Défi supplémentaire 🧠
 
 Tu veux aller plus loin ?
 
