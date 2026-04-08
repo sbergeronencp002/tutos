@@ -127,13 +127,7 @@ input.onButtonPressed(Button.A, function () {
     compteur += 1
     basic.showNumber(compteur)
     if (compteur == 10) {
-        basic.showLeds(`
-            . # # # .
-            # # # # #
-            # # # # #
-            . # # # .
-            . . # . .
-            `)
+        basic.showIcon(IconNames.Yes)
         basic.pause(1000)
     }
 })
