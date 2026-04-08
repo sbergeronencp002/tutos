@@ -6,7 +6,7 @@
 
 Dans ce tutoriel, tu vas apprendre à utiliser le bloc **afficher texte** pour personnaliser l'affichage de ton micro:bit.
 
-C'est parti ! 🚀
+C'est parti ! 🚀🚀
 
 ## Étape 1 — Ajouter un bloc
 
