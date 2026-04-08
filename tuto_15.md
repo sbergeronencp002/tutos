@@ -81,13 +81,13 @@ basic.showString("Pret !")
 
 ➡️ Glisse le bloc ``||variables:définir entree à " "||`` à l'intérieur du bloc ``||input:lorsque le bouton A est pressé||``.
 
-➡️ Dans le bloc, insère le bloc ``||text:joindre " " " "||`` depuis l'onglet **Texte**.
+➡️ Dans le bloc, insère le bloc ``||text:concaténation||`` depuis l'onglet **Texte**.
 
-➡️ Dans la partie gauche du bloc ``||text:joindre||``, insère la variable `entree`.
+➡️ Dans la partie gauche du bloc ``||text:concaténation||``, insère la variable `entree`.
 
 ➡️ Dans la partie droite, écris `"A"`.
 
-> 💡 Le bloc **joindre** colle deux morceaux de texte ensemble — ici, il ajoute `"A"` à la fin de ce qui est déjà dans `entree` !
+> 💡 Le bloc **concaténation** colle deux morceaux de texte ensemble — ici, il ajoute `"A"` à la fin de ce qui est déjà dans `entree` !
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -118,9 +118,9 @@ input.onButtonPressed(Button.A, function () {
 
 ➡️ Glisse le bloc ``||variables:définir entree à " "||`` à l'intérieur du bloc ``||input:lorsque le bouton B est pressé||``.
 
-➡️ Dans le bloc, insère le bloc ``||text:joindre " " " "||`` depuis l'onglet **Texte**.
+➡️ Dans le bloc, insère le bloc ``||text:concaténation||`` depuis l'onglet **Texte**.
 
-➡️ Dans la partie gauche du bloc ``||text:joindre||``, insère la variable `entree`.
+➡️ Dans la partie gauche du bloc ``||text:concaténation||``, insère la variable `entree`.
 
 ➡️ Dans la partie droite, écris `"B"`.
 
