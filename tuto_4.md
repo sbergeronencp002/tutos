@@ -144,11 +144,11 @@ input.onButtonPressed(Button.B, function () {
 })
 input.onButtonPressed(Button.AB, function () {
     basic.showLeds(`
-        # . . . #
-        # . . # .
-        # . # . .
-        # . . # .
-        # . . . #
+        # # # . #
+        . # . # .
+        . . # . #
+        # # . # #
+        . # . . #
         `)
     basic.showString("Arc")
 })
