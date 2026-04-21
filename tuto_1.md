@@ -108,11 +108,13 @@ basic.forever(function () {
 
 ## Étape 10 — Défi supplémentaire 🧠
 
-**Défi de base :**
+**Défi de base**
 
 ➡️ Ajoute un deuxième bloc ``||basic:afficher texte||`` pour faire défiler ton **nom de famille** après ton prénom.
 
 ➡️ Ajoute un bloc ``||basic:pause (ms)||`` entre les deux blocs et remplace la valeur par `1000`.
+
+> ❓ Que se passe-t-il si tu changes la valeur de la pause à `100` ? Et à `3000` ?
 
 ```blocks
 basic.forever(function () {
@@ -123,9 +125,10 @@ basic.forever(function () {
 })
 ```
 
-> ❓ Que se passe-t-il si tu changes la valeur de la pause à `100` ? Et à `3000` ?
+## Étape 10 — Défi supplémentaire 🧠
 
-**Défi avancé :**
+
+**Défi avancé**
 
 ➡️ Ajoute un bloc ``||basic:afficher nombre||`` pour afficher ton année de naissance après ton prénom.
 

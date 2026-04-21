@@ -111,13 +111,15 @@ input.onButtonPressed(Button.AB, function () {
 
 ## Étape 8 — Défi supplémentaire 🧠
 
-**Défi de base :**
+**Défi de base**
 
 ➡️ Remplace les dessins des boutons A, B et A+B par tes propres images.
 
 > ❓ Peux-tu dessiner un bouclier ? Une potion ? Un autre objet de ton choix ?
 
-**Défi avancé :**
+## Étape 9 — Défi supplémentaire 🧠
+
+**Défi avancé**
 
 ➡️ Ajoute un bloc ``||basic:afficher texte||`` après chaque dessin pour afficher le nom de l'objet.
 

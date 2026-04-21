@@ -74,13 +74,14 @@ basic.forever(function () {
 
 ## Étape 6 — Défi : une animation ⚔️🛡️🏹
 
-Tu veux aller plus loin ?
+**Défi de base**
 
 ➡️ Ajoute **deux autres** blocs ``||basic:montrer LEDs||`` pour créer une animation avec trois images différentes.
 
 ➡️ Ajoute un bloc ``||basic:pause (ms)||`` entre chaque image.
 
 > 💡 Tu connais déjà cette technique depuis le tutoriel sur les icônes — mais cette fois, c'est **toi** qui dessines chaque image !
+
 ```blocks
 basic.forever(function () {
     basic.showLeds(`
@@ -108,6 +109,42 @@ basic.forever(function () {
         `)
     basic.pause(500)
 })
+```
+
+## Étape 7 — Défi : une animation ⚔️🛡️🏹
+
+**Défi avancé**
+
+➡️ Crée une animation avec les lettres de ton prénom.
+
+```blocks
+basic.forever(function () {
+    basic.showLeds(`
+        # # # # .
+        # . . . .
+        # # # # .
+        . . . # .
+        # # # # .
+        `)
+    basic.pause(500)
+    basic.showLeds(`
+        # # # # .
+        # . . . .
+        # # # . .
+        # . . . .
+        # # # # .
+        `)
+    basic.pause(500)
+    basic.showLeds(`
+        # # # . .
+        # . . # .
+        # . # . .
+        # . . # .
+        # # # # .
+        `)
+    basic.pause(500)
+})
+
 ```
 
 🚀 Bravo ! Tu sais maintenant dessiner n'importe quelle image sur le micro:bit !

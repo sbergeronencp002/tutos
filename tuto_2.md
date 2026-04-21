@@ -46,7 +46,9 @@ basic.forever(function () {
 
 > 🎉 Ça fonctionne ? Bravo ! Passons au défi !
 
-## Étape 5 — Défi : une animation 🧠
+## Étape 5 — Défi supplémentaire 🧠
+
+**Défi de base**
 
 Tu veux aller plus loin ?
 
@@ -62,7 +64,9 @@ basic.forever(function () {
 })
 ```
 
-## Étape 6 — Ralentir l'animation
+## Étape 6 — Défi supplémentaire 🧠
+
+**Défi avancé**
 
 ⏱️ L'animation va trop vite ? Ajoute des pauses !
 
