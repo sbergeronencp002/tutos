@@ -1,4 +1,4 @@
-# Tutoriel 1 — Afficher mon prénom
+# Tutoriel 1 — Afficher un mot
 
 ## @showdialog
 
@@ -8,15 +8,7 @@ Dans ce tutoriel, tu vas apprendre à utiliser le bloc **afficher texte** pour p
 
 C'est parti ! 🚀
 
-## Étape 1 — Préparer l'espace de travail
-
-🧹 Fais le ménage !
-
-➡️ Supprime le bloc ``||basic:au démarrage||``.
-
-> 💡 On garde le bloc ``||basic:toujours||`` — on va s'en servir à l'étape suivante !
-
-## Étape 2 — Le bloc démarrage et le bloc toujours
+## Étape 1 — Le bloc démarrage et le bloc toujours
 
 > 💡 Le micro:bit possède deux blocs très importants :
 
@@ -28,7 +20,7 @@ C'est parti ! 🚀
 
 > 💡 Parce qu'on veut que le prénom défile **en continu** — si on utilisait ``||basic:au démarrage||``, il ne s'afficherait qu'une seule fois au démarrage, puis disparaîtrait !
 
-## Étape 3 — Ajouter un bloc
+## Étape 2 — Ajouter un bloc
 
 ✨ Ajoute un bloc !
 
@@ -40,7 +32,7 @@ basic.forever(function () {
 })
 ```
 
-## Étape 4 — Écrire mon prénom
+## Étape 3 — Écrire mon prénom
 
 ✏️ Remplace le texte par défaut !
 
@@ -54,7 +46,7 @@ basic.forever(function () {
 })
 ```
 
-## Étape 5 — Tester les caractères spéciaux
+## Étape 4 — Tester les caractères spéciaux
 
 🔬 Fais une petite expérience !
 
@@ -70,7 +62,7 @@ basic.forever(function () {
 })
 ```
 
-## Étape 6 — Corriger l'affichage
+## Étape 5 — Corriger l'affichage
 
 ✅ Reviens à un affichage correct !
 
@@ -84,7 +76,7 @@ basic.forever(function () {
 })
 ```
 
-## Étape 7 — Vérifier sur le simulateur
+## Étape 6 — Vérifier sur le simulateur
 
 🖥️ Observe le résultat avant de télécharger !
 
@@ -92,13 +84,13 @@ basic.forever(function () {
 
 > ❓ Est-ce bien le résultat attendu ? Modifie les blocs au besoin.
 
-## Étape 8 — Télécharger le programme
+## Étape 7 — Télécharger le programme
 
 💾 Envoie ton programme sur le micro:bit !
 
 ➡️ Clique sur le bouton **Télécharger** pour transférer ton programme.
 
-## Étape 9 — Observer le résultat
+## Étape 8 — Observer le résultat
 
 👀 Regarde ton micro:bit !
 
@@ -106,39 +98,43 @@ basic.forever(function () {
 
 > 🎉 Si tout fonctionne bien, félicitations ! Tu viens de créer ton premier programme personnalisé.
 
-## Étape 10 — Défi supplémentaire 🧠
+## Étape 9 — Défi supplémentaire 🧠
 
-**Défi de base**
+**Défi de base :**
 
-➡️ Ajoute un deuxième bloc ``||basic:afficher texte||`` pour faire défiler ton **nom de famille** après ton prénom.
+➡️ Utilise le bloc ``||basic:au démarrage||`` pour afficher ton **nom de famille** une seule fois au démarrage.
 
-➡️ Ajoute un bloc ``||basic:pause (ms)||`` entre les deux blocs et remplace la valeur par `1000`.
+➡️ Ajoute un bloc ``||basic:effacer l'écran||`` après le bloc ``||basic:afficher texte||``.
 
-> ❓ Que se passe-t-il si tu changes la valeur de la pause à `100` ? Et à `3000` ?
+➡️ Garde ton **prénom** dans le bloc ``||basic:toujours||``.
 
 ```blocks
+basic.showString("Bergeron")
+basic.clearScreen()
 basic.forever(function () {
     basic.showString("Seb")
-    basic.pause(1000)
-    basic.showString("Bergeron")
-    basic.pause(1000)
 })
 ```
 
-## Étape 10 — Défi supplémentaire 🧠
+> ❓ Que se passe-t-il au démarrage ? Et ensuite ? Vois-tu la différence entre les deux blocs ?
 
+**Défi avancé :**
 
-**Défi avancé**
+➡️ Utilise le bloc ``||basic:au démarrage||`` pour afficher ton **nom de famille**.
 
-➡️ Ajoute un bloc ``||basic:afficher nombre||`` pour afficher ton année de naissance après ton prénom.
+➡️ Dans le bloc ``||basic:toujours||``, alterne entre ton **prénom** et ton **année de naissance** avec une pause entre les deux.
 
 ```blocks
+basic.showString("Bergeron")
+basic.clearScreen()
 basic.forever(function () {
     basic.showString("Seb")
+    basic.pause(1000)
     basic.showNumber(1986)
+    basic.pause(1000)
 })
 ```
 
-> ❓ Que se passe-t-il si tu mets un nombre négatif ?
+> ❓ Combien de fois le nom de famille s'affiche-t-il ? Et le prénom ? Pourquoi cette différence ?
 
-🚀 Bravo ! Tu maîtrises maintenant l'affichage de texte sur le micro:bit !
+🚀 Bravo ! Tu maîtrises maintenant la différence entre le bloc ``||basic:au démarrage||`` et le bloc ``||basic:toujours||`` !
