@@ -72,6 +72,7 @@ input.onGesture(Gesture.Shake, function () {
 ➡️ Glisse un bloc ``||basic:montrer LEDs||`` à l'intérieur de chacune des six conditions.
 
 ➡️ Reproduis les dessins ci-dessous.
+
 ```blocks
 let face = 0
 input.onGesture(Gesture.Shake, function () {

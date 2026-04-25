@@ -66,6 +66,7 @@ input.onGesture(Gesture.Shake, function () {
 ➡️ À l'intérieur de la condition, glisse le bloc ``||basic:montrer LEDs||`` et reproduis le dessin de la pierre ci-dessous.
 
 > 💡 Une condition pose une question : *"Est-ce que `choix` est égal à `1` ?"*. Si la réponse est **oui**, le programme affiche la pierre. Sinon, il passe à la suite !
+
 ```blocks
 let choix = 0
 input.onGesture(Gesture.Shake, function () {
@@ -93,6 +94,7 @@ input.onGesture(Gesture.Shake, function () {
 ➡️ À l'intérieur de la condition, glisse le bloc ``||basic:montrer LEDs||`` et reproduis le dessin du papier ci-dessous.
 
 > 💡 Cette deuxième condition pose la question : *"Est-ce que `choix` est égal à `2` ?"*. Si oui, le programme affiche le papier !
+
 ```blocks
 let choix = 0
 input.onGesture(Gesture.Shake, function () {
@@ -129,6 +131,7 @@ input.onGesture(Gesture.Shake, function () {
 ➡️ À l'intérieur de la condition, glisse le bloc ``||basic:montrer LEDs||`` et reproduis le dessin des ciseaux ci-dessous.
 
 > 💡 Le programme vérifie maintenant trois conditions une par une. Il n'entre dans une condition que si elle est **vraie** !
+
 ```blocks
 let choix = 0
 input.onGesture(Gesture.Shake, function () {
@@ -198,6 +201,7 @@ input.onGesture(Gesture.Shake, function () {
 **Défi avancé :**
 
 ➡️ Ajoute un bloc ``||basic:afficher texte||`` après chaque dessin pour afficher le nom du choix (`"Pierre"`, `"Papier"` ou `"Ciseaux"`).
+
 ```blocks
 let choix = 0
 input.onGesture(Gesture.Shake, function () {
