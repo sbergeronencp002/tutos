@@ -44,6 +44,7 @@ let face = 0
 > 💡 À chaque secousse, le micro:bit tire un nombre entre `1` et `6` — exactement comme lancer un vrai dé !
 
 > ℹ️ Ne t'inquiète pas si rien ne s'affiche encore — on va ajouter les conditions aux étapes suivantes !
+
 ```blocks
 let face = 0
 input.onGesture(Gesture.Shake, function () {
@@ -248,3 +249,5 @@ input.onGesture(Gesture.Shake, function () {
 ```
 
 > ❓ Que se passe-t-il si tu changes la valeur de la pause à `50` ? Et à `300` ?
+
+🚀 Bravo ! Tu sais maintenant combiner variables, hasard et conditions pour créer un dé numérique !

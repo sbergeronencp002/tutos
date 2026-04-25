@@ -182,3 +182,5 @@ basic.forever(function () {
 ```
 
 > ❓ Est-ce que les trois zones de température sont bien distinctes dans ta classe ?
+
+🚀 Bravo ! Tu sais maintenant utiliser le capteur de température pour faire réagir ton micro:bit à son environnement !

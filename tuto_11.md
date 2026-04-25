@@ -142,3 +142,5 @@ radio.onReceivedString(function (receivedString) {
 ➡️ Ajoute un troisième message avec le bouton **A+B**.
 
 > ❓ Quels blocs dois-tu ajouter dans ton programme ?
+
+🚀 Bravo ! Tu sais maintenant envoyer et recevoir des messages par radio entre deux micro:bits !

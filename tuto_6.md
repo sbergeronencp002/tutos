@@ -27,6 +27,7 @@ C'est parti ! 🚀
 ➡️ Glisse le bloc ``||variables:définir compteur à 0||`` à l'intérieur du bloc ``||basic:au démarrage||``.
 
 > 💡 Une **variable**, c'est comme une case mémoire. On lui donne un nom et on y stocke une valeur. Ici, `compteur` commence à `0`.
+
 ```blocks
 let compteur = 0
 ```
@@ -42,6 +43,7 @@ let compteur = 0
 ➡️ Dans le bloc ``||basic:afficher nombre||``, insère la variable `compteur`.
 
 > 💡 À chaque appui sur **A**, la valeur de `compteur` augmente de `1` et s'affiche sur l'écran !
+
 ```blocks
 input.onButtonPressed(Button.A, function () {
     compteur += 1
@@ -60,6 +62,7 @@ input.onButtonPressed(Button.A, function () {
 ➡️ Glisse ensuite le bloc ``||basic:afficher nombre||`` en dessous avec la variable `compteur`.
 
 > 💡 À chaque appui sur **B**, la valeur de `compteur` diminue de `1`. Tu peux donc corriger une erreur de comptage !
+
 ```blocks
 input.onButtonPressed(Button.B, function () {
     compteur += -1
@@ -76,6 +79,7 @@ input.onButtonPressed(Button.B, function () {
 ➡️ Glisse ensuite le bloc ``||basic:afficher nombre||`` en dessous avec la variable `compteur`.
 
 > 💡 **A+B** remet le compteur à zéro — utile pour recommencer une nouvelle partie !
+
 ```blocks
 input.onButtonPressed(Button.AB, function () {
     compteur = 0

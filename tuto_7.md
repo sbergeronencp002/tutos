@@ -44,6 +44,7 @@ let choix = 0
 > 💡 Le bloc **choisir au hasard** tire un nombre entre `1` et `3` — comme lancer un dé ! À chaque secousse, le micro:bit choisit un nombre différent.
 
 > ℹ️ Ne t'inquiète pas si rien ne s'affiche encore — on va ajouter les conditions aux étapes suivantes !
+
 ```blocks
 let choix = 0
 input.onGesture(Gesture.Shake, function () {

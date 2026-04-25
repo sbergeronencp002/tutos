@@ -94,6 +94,7 @@ input.onGesture(Gesture.Shake, function () {
     }
 })
 ```
+
 ## Étape 7 — Vérifier sur le simulateur
 
 🖥️ Observe le résultat avant de télécharger !
@@ -122,9 +123,7 @@ input.onGesture(Gesture.Shake, function () {
 
 ## Étape 10 — Défi supplémentaire 🧠
 
-Tu veux aller plus loin ?
-
-**Défi de base**
+**Défi de base :**
 
 ➡️ Modifie la valeur des pauses pour accélérer ou ralentir le battement de cœur.
 
@@ -132,9 +131,7 @@ Tu veux aller plus loin ?
 
 > ❓ Quelle combinaison donne l'animation la plus réaliste ?
 
-## Étape 11 — Défi supplémentaire 🧠
-
-**Défi avancé**
+**Défi avancé :**
 
 ➡️ Ajoute un bloc ``||basic:effacer l'écran||`` et une pause à la fin de la boucle pour ajouter un moment de silence entre chaque battement.
 
@@ -151,4 +148,6 @@ input.onGesture(Gesture.Shake, function () {
     basic.clearScreen()
     basic.pause(500)
 })
+
+🚀 Bravo ! Tu sais maintenant utiliser une boucle pour animer un battement de cœur sur le micro:bit !
 ```
