@@ -27,6 +27,7 @@ C'est parti ! 🚀
 ➡️ Glisse le bloc ``||variables:définir choix à 0||`` à l'intérieur du bloc ``||basic:au démarrage||``.
 
 > 💡 La variable `choix` va mémoriser le résultat du tirage au sort — `1` pour pierre, `2` pour papier, `3` pour ciseaux.
+
 ```blocks
 let choix = 0
 ```

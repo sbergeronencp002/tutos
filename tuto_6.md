@@ -126,6 +126,7 @@ input.onButtonPressed(Button.AB, function () {
 ➡️ Affiche l'icône d'un trophée 🏆 lorsque `compteur` atteint `10`.
 
 ➡️ Utilise le bloc ``||basic:montrer LEDs||`` après le bloc ``||basic:afficher nombre||`` dans la séquence du bouton A.
+
 ```blocks
 input.onButtonPressed(Button.A, function () {
     compteur += 1

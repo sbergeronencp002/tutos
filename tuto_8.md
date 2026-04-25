@@ -27,6 +27,7 @@ C'est parti ! 🚀
 ➡️ Glisse le bloc ``||variables:définir face à 0||`` à l'intérieur du bloc ``||basic:au démarrage||``.
 
 > 💡 La variable `face` va mémoriser le résultat du lancer — un nombre entre `1` et `6`, comme un vrai dé !
+
 ```blocks
 let face = 0
 ```

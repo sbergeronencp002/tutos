@@ -148,6 +148,6 @@ input.onGesture(Gesture.Shake, function () {
     basic.clearScreen()
     basic.pause(500)
 })
+```
 
 🚀 Bravo ! Tu sais maintenant utiliser une boucle pour animer un battement de cœur sur le micro:bit !
-```
