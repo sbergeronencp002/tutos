@@ -30,10 +30,10 @@ C'est parti ! 🚀
 function repos() {
     basic.showLeds(`
         . . # . .
-        . # # # .
+        . . # # .
+        . . # . #
         # # # # #
-        . . . . .
-        . # . # .
+        . # # # .
         `)
     basic.pause(500)
 }
@@ -52,11 +52,11 @@ function repos() {
 ```blocks
 function vague() {
     basic.showLeds(`
-        . . . # .
-        . . # # #
-        . # # # #
-        # . . . .
-        # # . . .
+        . . # . .
+        . . # # .
+        . . # . #
+        # # # # #
+        # # # . .
         `)
     basic.pause(400)
 }
@@ -76,10 +76,10 @@ function vague() {
 function creux() {
     basic.showLeds(`
         . . # . .
-        . # # # .
+        . . # # .
+        . . # . #
         # # # # #
-        # . . . #
-        # . . . #
+        # . # . #
         `)
     basic.pause(400)
 }
@@ -169,33 +169,33 @@ function tempete() {
 function naufrage() {
     basic.showLeds(`
         . . # . .
-        . # # # .
+        . . # # .
+        . . # . #
+        # # # # #
+        # # # # #
+        `)
+    basic.pause(400)
+    basic.showLeds(`
+        . . # . .
+        . . # # .
         # # # # #
         # # # # #
         # # # # #
         `)
     basic.pause(400)
     basic.showLeds(`
-        . . . . .
         . . # . .
         # # # # #
         # # # # #
         # # # # #
-        `)
-    basic.pause(400)
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        # # # # #
         # # # # #
         `)
     basic.pause(400)
     basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
+        # # # # #
+        # # # # #
+        # # # # #
+        # # # # #
         # # # # #
         `)
     basic.pause(600)
@@ -264,10 +264,10 @@ input.onGesture(Gesture.Shake, function () {
 ```blocks
 basic.showLeds(`
     . . # . .
-    . # # # .
+    . . # # .
+    . . # . #
     # # # # #
-    . . . . .
-    . # . # .
+    . # # # .
     `)
 ```
 
