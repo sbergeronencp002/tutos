@@ -252,15 +252,13 @@ input.onButtonPressed(Button.AB, function () {
 
 > 💡 Avec 4 lettres et 2 choix possibles (A ou B), il y a **16 combinaisons différentes** — l'ordre est crucial, ce qui rend le coffre-fort difficile à deviner !
 
-## Étape 17 — Défi supplémentaire 🧠
-
-**Défi de base :**
+## Étape 17 — Défi de base 🧠
 
 ➡️ Change la combinaison secrète `"AABB"` pour une combinaison de ton choix.
 
 > ❓ Combien de tentatives faut-il à ton ami pour trouver ta combinaison ?
 
-**Défi avancé :**
+## Étape 18 — Défi avancé 🧠
 
 ➡️ Ajoute un compteur de tentatives — après **3 essais incorrects**, affiche `"Bloque !"` et empêche toute nouvelle tentative jusqu'à ce que le micro:bit soit redémarré.
 

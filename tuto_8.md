@@ -27,6 +27,7 @@ C'est parti ! 🚀
 ➡️ Glisse le bloc ``||variables:définir face à 0||`` à l'intérieur du bloc ``||basic:au démarrage||``.
 
 > 💡 La variable `face` va mémoriser le résultat du lancer — un nombre entre `1` et `6`, comme un vrai dé !
+
 ```blocks
 let face = 0
 ```
@@ -44,6 +45,7 @@ let face = 0
 > 💡 À chaque secousse, le micro:bit tire un nombre entre `1` et `6` — exactement comme lancer un vrai dé !
 
 > ℹ️ Ne t'inquiète pas si rien ne s'affiche encore — on va ajouter les conditions aux étapes suivantes !
+
 ```blocks
 let face = 0
 input.onGesture(Gesture.Shake, function () {
@@ -70,6 +72,7 @@ input.onGesture(Gesture.Shake, function () {
 ➡️ Glisse un bloc ``||basic:montrer LEDs||`` à l'intérieur de chacune des six conditions.
 
 ➡️ Reproduis les dessins ci-dessous.
+
 ```blocks
 let face = 0
 input.onGesture(Gesture.Shake, function () {
@@ -155,15 +158,13 @@ input.onGesture(Gesture.Shake, function () {
 
 > 💡 Rien de fondamental — le principe est exactement le même ! Plus il y a de cas possibles, plus on ajoute de conditions. C'est la puissance des conditions : elles s'adaptent à n'importe quelle situation.
 
-## Étape 9 — Défi supplémentaire 🧠
-
-**Défi de base :**
+## Étape 9 — Défi de base 🧠
 
 ➡️ Améliore les dessins des six faces pour qu'ils ressemblent encore plus à un vrai dé.
 
 > ❓ Les points sont-ils bien placés par rapport à un vrai dé ?
 
-**Défi avancé :**
+## Étape 10 — Défi avancé 🧠
 
 ➡️ Ajoute une animation de "lancer" avant d'afficher le résultat.
 
@@ -248,3 +249,5 @@ input.onGesture(Gesture.Shake, function () {
 ```
 
 > ❓ Que se passe-t-il si tu changes la valeur de la pause à `50` ? Et à `300` ?
+
+🚀 Bravo ! Tu sais maintenant combiner variables, hasard et conditions pour créer un dé numérique !

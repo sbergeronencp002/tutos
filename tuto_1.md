@@ -98,9 +98,15 @@ basic.forever(function () {
 
 > 🎉 Si tout fonctionne bien, félicitations ! Tu viens de créer ton premier programme personnalisé.
 
-## Étape 9 — Défi supplémentaire 🧠
+## Étape 9 — Question réflexive 🤔
 
-**Défi de base :**
+❓ **Que se passe-t-il si tu déplaces le bloc ``||basic:afficher texte||`` dans ``||basic:au démarrage||`` au lieu de ``||basic:toujours||`` ?**
+
+❓ **Pourquoi les accents et les caractères spéciaux ne s'affichent-ils pas correctement sur le micro:bit ?**
+
+> 💡 Dans ``||basic:au démarrage||``, le texte s'affiche une seule fois au démarrage puis disparaît. L'écran LED du micro:bit ne supporte pas les caractères accentués — utilise uniquement des lettres sans accents pour un affichage correct !
+
+## Étape 10 — Défi de base 🧠
 
 ➡️ Utilise le bloc ``||basic:au démarrage||`` pour afficher ton **nom de famille** une seule fois au démarrage.
 
@@ -118,7 +124,7 @@ basic.forever(function () {
 
 > ❓ Que se passe-t-il au démarrage ? Et ensuite ? Vois-tu la différence entre les deux blocs ?
 
-**Défi avancé :**
+## Étape 11 — Défi avancé 🧠
 
 ➡️ Utilise le bloc ``||basic:au démarrage||`` pour afficher ton **nom de famille**.
 

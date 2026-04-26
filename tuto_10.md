@@ -166,15 +166,13 @@ input.onGesture(Gesture.Shake, function () {
 
 > 💡 Avec `choisir au hasard de 1 à 3`, seules les trois premières conditions pourraient être vraies — les réponses `4` et `5` n'apparaîtraient jamais !
 
-## Étape 10 — Défi supplémentaire 🧠
-
-**Défi de base :**
+## Étape 10 — Défi de base 🧠
 
 ➡️ Remplace les réponses textuelles par des icônes ou des dessins en utilisant le bloc ``||basic:montrer l'icône||`` ou ``||basic:montrer LEDs||``.
 
 > ❓ Peux-tu dessiner un visage heureux pour "Oui" et un visage triste pour "Non" ?
 
-**Défi avancé :**
+## Étape 11 — Défi avancé 🧠
 
 ➡️ Ajoute une animation de "consultation" avant d'afficher la réponse : fais défiler des points de suspension `"..."` avec une pause, pour faire patienter l'utilisateur.
 

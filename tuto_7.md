@@ -27,6 +27,7 @@ C'est parti ! 🚀
 ➡️ Glisse le bloc ``||variables:définir choix à 0||`` à l'intérieur du bloc ``||basic:au démarrage||``.
 
 > 💡 La variable `choix` va mémoriser le résultat du tirage au sort — `1` pour pierre, `2` pour papier, `3` pour ciseaux.
+
 ```blocks
 let choix = 0
 ```
@@ -44,6 +45,7 @@ let choix = 0
 > 💡 Le bloc **choisir au hasard** tire un nombre entre `1` et `3` — comme lancer un dé ! À chaque secousse, le micro:bit choisit un nombre différent.
 
 > ℹ️ Ne t'inquiète pas si rien ne s'affiche encore — on va ajouter les conditions aux étapes suivantes !
+
 ```blocks
 let choix = 0
 input.onGesture(Gesture.Shake, function () {
@@ -64,6 +66,7 @@ input.onGesture(Gesture.Shake, function () {
 ➡️ À l'intérieur de la condition, glisse le bloc ``||basic:montrer LEDs||`` et reproduis le dessin de la pierre ci-dessous.
 
 > 💡 Une condition pose une question : *"Est-ce que `choix` est égal à `1` ?"*. Si la réponse est **oui**, le programme affiche la pierre. Sinon, il passe à la suite !
+
 ```blocks
 let choix = 0
 input.onGesture(Gesture.Shake, function () {
@@ -91,6 +94,7 @@ input.onGesture(Gesture.Shake, function () {
 ➡️ À l'intérieur de la condition, glisse le bloc ``||basic:montrer LEDs||`` et reproduis le dessin du papier ci-dessous.
 
 > 💡 Cette deuxième condition pose la question : *"Est-ce que `choix` est égal à `2` ?"*. Si oui, le programme affiche le papier !
+
 ```blocks
 let choix = 0
 input.onGesture(Gesture.Shake, function () {
@@ -127,6 +131,7 @@ input.onGesture(Gesture.Shake, function () {
 ➡️ À l'intérieur de la condition, glisse le bloc ``||basic:montrer LEDs||`` et reproduis le dessin des ciseaux ci-dessous.
 
 > 💡 Le programme vérifie maintenant trois conditions une par une. Il n'entre dans une condition que si elle est **vraie** !
+
 ```blocks
 let choix = 0
 input.onGesture(Gesture.Shake, function () {
@@ -185,17 +190,16 @@ input.onGesture(Gesture.Shake, function () {
 
 > 💡 Avec trois blocs ``||logic:si||`` séparés, le programme vérifie **toujours** les trois conditions une par une — même si la première est vraie. C'est différent du **sinon si**, qui s'arrête dès qu'une condition est vraie !
 
-## Étape 10 — Défi supplémentaire 🧠
-
-**Défi de base :**
+## Étape 10 — Défi de base 🧠
 
 ➡️ Améliore les dessins de la pierre, du papier et des ciseaux pour qu'ils soient plus reconnaissables.
 
 > ❓ Peux-tu dessiner des ciseaux ouverts et des ciseaux fermés en alternance pour créer une petite animation ?
 
-**Défi avancé :**
+## Étape 11 — Défi avancé 🧠
 
 ➡️ Ajoute un bloc ``||basic:afficher texte||`` après chaque dessin pour afficher le nom du choix (`"Pierre"`, `"Papier"` ou `"Ciseaux"`).
+
 ```blocks
 let choix = 0
 input.onGesture(Gesture.Shake, function () {

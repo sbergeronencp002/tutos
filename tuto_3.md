@@ -72,9 +72,15 @@ basic.forever(function () {
 
 > 🎉 Tu as créé ta propre image ! Bravo !
 
-## Étape 6 — Défi : une animation ⚔️🛡️🏹
+## Étape 6 — Question réflexive 🤔
 
-**Défi de base**
+❓ **Quelle est la différence entre le bloc ``||basic:montrer LEDs||`` et le bloc ``||basic:montrer l'icône||`` ?**
+
+❓ **Combien de LEDs contient la grille du micro:bit au total ?**
+
+> 💡 Avec ``||basic:montrer l'icône||``, tu choisis parmi des images prédéfinies. Avec ``||basic:montrer LEDs||``, tu allumes toi-même les LEDs une par une. La grille est de 5 × 5 = **25 LEDs** au total !
+
+## Étape 7 — Défi de base 🧠
 
 ➡️ Ajoute **deux autres** blocs ``||basic:montrer LEDs||`` pour créer une animation avec trois images différentes.
 
@@ -111,9 +117,7 @@ basic.forever(function () {
 })
 ```
 
-## Étape 7 — Défi : une animation ⚔️🛡️🏹
-
-**Défi avancé**
+## Étape 8 — Défi avancé 🧠
 
 ➡️ Crée une animation avec les lettres de ton prénom.
 

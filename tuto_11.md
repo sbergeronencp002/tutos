@@ -129,16 +129,16 @@ radio.onReceivedString(function (receivedString) {
 
 > 💡 Envoyer un texte est plus simple — le message s'affiche tel quel sans avoir besoin de conditions ! Envoyer un nombre est plus flexible — on peut décider quoi afficher selon le nombre reçu, comme tu l'as vu dans les tutoriels précédents.
 
-## Étape 9 — Défi supplémentaire 🧠
-
-**Défi de base :**
+## Étape 9 — Défi de base 🧠
 
 ➡️ Remplace `"Bonjour !"` et `"Au revoir !"` par tes propres messages secrets avec ton coéquipier.
 
 > ❓ Est-ce que ton coéquipier peut deviner ce que tu voulais lui dire ?
 
-**Défi avancé :**
+## Étape 10 — Défi avancé 🧠
 
 ➡️ Ajoute un troisième message avec le bouton **A+B**.
 
 > ❓ Quels blocs dois-tu ajouter dans ton programme ?
+
+🚀 Bravo ! Tu sais maintenant envoyer et recevoir des messages par radio entre deux micro:bits !

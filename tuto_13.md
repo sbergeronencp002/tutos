@@ -143,15 +143,13 @@ basic.forever(function () {
 
 > 💡 Le capteur mesure la chaleur du processeur — mais comme il est influencé par la température ambiante, il reste un bon indicateur ! Dans la vraie vie, ce principe est utilisé dans les thermostats, les serres agricoles, et même les vêtements intelligents !
 
-## Étape 10 — Défi supplémentaire 🧠
-
-**Défi de base :**
+## Étape 10 — Défi de base 🧠
 
 ➡️ Modifie le seuil de `20` pour qu'il corresponde mieux à la température de ta classe.
 
 > ❓ Quelle valeur donne le meilleur résultat dans ton environnement ?
 
-**Défi avancé :**
+## Étape 11 — Défi avancé 🧠
 
 ➡️ Ajoute une troisième condition pour une température **moyenne** — affiche une icône différente quand la température est entre `20` et `25`.
 
@@ -182,3 +180,5 @@ basic.forever(function () {
 ```
 
 > ❓ Est-ce que les trois zones de température sont bien distinctes dans ta classe ?
+
+🚀 Bravo ! Tu sais maintenant utiliser le capteur de température pour faire réagir ton micro:bit à son environnement !

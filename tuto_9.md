@@ -29,6 +29,7 @@ C'est parti ! 🚀
 ➡️ Remplace le `0` par `10`.
 
 > 💡 La variable `temps` représente le nombre de secondes restantes. Elle commence à `10` et descendra jusqu'à `0` !
+
 ```blocks
 let temps = 10
 ```
@@ -44,6 +45,7 @@ let temps = 10
 ➡️ Dans le bloc ``||basic:afficher nombre||``, insère la variable `temps`.
 
 > 💡 En appuyant sur **A**, le micro:bit affiche d'abord la valeur de départ avant de commencer le compte à rebours !
+
 ```blocks
 let temps = 10
 input.onButtonPressed(Button.A, function () {
@@ -108,6 +110,7 @@ input.onButtonPressed(Button.A, function () {
 ➡️ Glisse ensuite le bloc ``||basic:afficher texte||`` et écris `"Termine!"`.
 
 > 💡 Quand la boucle se termine, le micro:bit sait que le temps est écoulé — il affiche une icône et un message pour signaler la fin !
+
 ```blocks
 let temps = 10
 input.onButtonPressed(Button.A, function () {
@@ -133,6 +136,7 @@ input.onButtonPressed(Button.A, function () {
 ➡️ Glisse ensuite le bloc ``||basic:afficher nombre||`` avec la variable `temps`.
 
 > 💡 Le bouton **B** remet la minuterie à `10` pour recommencer — utile si tu veux relancer le compte à rebours sans redémarrer le micro:bit !
+
 ```blocks
 let temps = 10
 input.onButtonPressed(Button.B, function () {
@@ -167,17 +171,13 @@ input.onButtonPressed(Button.B, function () {
 
 > 💡 Le micro:bit ne peut exécuter qu'une séquence à la fois. Si tu appuies sur un bouton pendant qu'une boucle est en cours, il devra attendre que la boucle se termine avant de réagir !
 
-## Étape 11 — Défi supplémentaire 🧠
-
-**Défi de base :**
+## Étape 11 — Défi de base 🧠
 
 ➡️ Modifie la minuterie pour qu'elle compte à rebours de `20` secondes au lieu de `10`.
 
 > ❓ Quels éléments de ton programme dois-tu modifier ?
 
-**Défi avancé :**
-
-**Défi avancé :**
+## Étape 12 — Défi avancé 🧠
 
 ➡️ Ajoute une condition pour afficher une icône d'avertissement quand il reste `3` secondes ou moins.
 
@@ -208,3 +208,5 @@ input.onButtonPressed(Button.A, function () {
 ```
 
 > ❓ Que se passe-t-il si tu changes la valeur `3` par `5` ? Et par `1` ?
+
+🚀 Bravo ! Tu sais maintenant utiliser une boucle pour créer un compte à rebours avec le micro:bit !

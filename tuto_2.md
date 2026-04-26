@@ -46,11 +46,15 @@ basic.forever(function () {
 
 > 🎉 Ça fonctionne ? Bravo ! Passons au défi !
 
-## Étape 5 — Défi supplémentaire 🧠
+## Étape 5 — Question réflexive 🤔
 
-**Défi de base**
+❓ **Que se passe-t-il si tu n'ajoutes pas de pause entre les icônes dans une animation ?**
 
-Tu veux aller plus loin ?
+❓ **Quelle différence y a-t-il entre afficher une icône et afficher un texte sur le micro:bit ?**
+
+> 💡 Sans pause, les icônes changent si vite qu'on ne peut pas les distinguer — l'animation devient floue ! Une icône est une image prédéfinie, tandis qu'un texte fait défiler des caractères un par un.
+
+## Étape 6 — Défi de base 🧠
 
 ➡️ Ajoute **deux autres** blocs ``||basic:montrer l'icône||`` pour afficher trois icônes différentes en séquence.
 
@@ -64,9 +68,7 @@ basic.forever(function () {
 })
 ```
 
-## Étape 6 — Défi supplémentaire 🧠
-
-**Défi avancé**
+## Étape 7 — Défi avancé 🧠
 
 ⏱️ L'animation va trop vite ? Ajoute des pauses !
 
