@@ -91,17 +91,45 @@ function creux() {
 
 ➡️ Crée une fonction et nomme-la `navigation`.
 
-➡️ À l'intérieur, appelle successivement : `repos`, `vague`, `creux`, `vague`, `repos`.
+➡️ À l'intérieur, appelle successivement : `repos`, `vague`, `creux`.
 
 > 💡 `navigation` ne dessine rien elle-même — elle **orchestre** les autres fonctions pour raconter le trajet complet d'une vague ! C'est une fonction qui appelle d'autres fonctions.
 
 ```blocks
+function repos() {
+    basic.showLeds(`
+        . . # . .
+        . . # # .
+        . . # . #
+        # # # # #
+        . # # # .
+        `)
+    basic.pause(500)
+}
+function vague() {
+    basic.showLeds(`
+        . . # . .
+        . . # # .
+        . . # . #
+        # # # # #
+        # # # . .
+        `)
+    basic.pause(400)
+}
+function creux() {
+    basic.showLeds(`
+        . . # . .
+        . . # # .
+        . . # . #
+        # # # # #
+        # . # . #
+        `)
+    basic.pause(400)
+}
 function navigation() {
     repos()
     vague()
     creux()
-    vague()
-    repos()
 }
 ```
 
@@ -145,6 +173,53 @@ function eclair() {
 > 💡 La tempête, c'est trois cycles de : éclair → bateau secoué par une vague. Trois lignes de code, mais une vraie histoire lumineuse !
 
 ```blocks
+function repos() {
+    basic.showLeds(`
+        . . # . .
+        . . # # .
+        . . # . #
+        # # # # #
+        . # # # .
+        `)
+    basic.pause(500)
+}
+function vague() {
+    basic.showLeds(`
+        . . # . .
+        . . # # .
+        . . # . #
+        # # # # #
+        # # # . .
+        `)
+    basic.pause(400)
+}
+function creux() {
+    basic.showLeds(`
+        . . # . .
+        . . # # .
+        . . # . #
+        # # # # #
+        # . # . #
+        `)
+    basic.pause(400)
+}
+function navigation() {
+    repos()
+    vague()
+    creux()
+}
+function eclair() {
+    basic.showLeds(`
+        # # . # #
+        . # . # .
+        . # # # .
+        . . # . .
+        . . # . .
+        `)
+    basic.pause(150)
+    basic.clearScreen()
+    basic.pause(150)
+}
 function tempete() {
     for (let index = 0; index < 3; index++) {
         eclair()
@@ -210,6 +285,41 @@ function naufrage() {
 ➡️ À l'intérieur, appelle `navigation`.
 
 ```blocks
+function repos() {
+    basic.showLeds(`
+        . . # . .
+        . . # # .
+        . . # . #
+        # # # # #
+        . # # # .
+        `)
+    basic.pause(500)
+}
+function vague() {
+    basic.showLeds(`
+        . . # . .
+        . . # # .
+        . . # . #
+        # # # # #
+        # # # . .
+        `)
+    basic.pause(400)
+}
+function creux() {
+    basic.showLeds(`
+        . . # . .
+        . . # # .
+        . . # . #
+        # # # # #
+        # . # . #
+        `)
+    basic.pause(400)
+}
+function navigation() {
+    repos()
+    vague()
+    creux()
+}
 input.onButtonPressed(Button.A, function () {
     navigation()
 })
@@ -222,6 +332,18 @@ input.onButtonPressed(Button.A, function () {
 ➡️ À l'intérieur, appelle `eclair`.
 
 ```blocks
+function eclair() {
+    basic.showLeds(`
+        # # . # #
+        . # . # .
+        . # # # .
+        . . # . .
+        . . # . .
+        `)
+    basic.pause(150)
+    basic.clearScreen()
+    basic.pause(150)
+}
 input.onButtonPressed(Button.B, function () {
     eclair()
 })
@@ -234,6 +356,65 @@ input.onButtonPressed(Button.B, function () {
 ➡️ À l'intérieur, appelle `tempete`.
 
 ```blocks
+function repos() {
+    basic.showLeds(`
+        . . # . .
+        . . # # .
+        . . # . #
+        # # # # #
+        . # # # .
+        `)
+    basic.pause(500)
+}
+function vague() {
+    basic.showLeds(`
+        . . # . .
+        . . # # .
+        . . # . #
+        # # # # #
+        # # # . .
+        `)
+    basic.pause(400)
+}
+function creux() {
+    basic.showLeds(`
+        . . # . .
+        . . # # .
+        . . # . #
+        # # # # #
+        # . # . #
+        `)
+    basic.pause(400)
+}
+function navigation() {
+    repos()
+    vague()
+    creux()
+}
+function eclair() {
+    basic.showLeds(`
+        # # . # #
+        . # . # .
+        . # # # .
+        . . # . .
+        . . # . .
+        `)
+    basic.pause(150)
+    basic.clearScreen()
+    basic.pause(150)
+}
+function tempete() {
+    for (let index = 0; index < 3; index++) {
+        eclair()
+        navigation()
+    }
+}
+input.onButtonPressed(Button.A, function () {
+    navigation()
+})
+input.onButtonPressed(Button.B, function () {
+    eclair()
+})
 input.onButtonPressed(Button.AB, function () {
     tempete()
 })
@@ -248,6 +429,41 @@ input.onButtonPressed(Button.AB, function () {
 > 💡 Secouer le micro:bit simule une tempête trop violente — le bateau coule ! C'est le moment dramatique de ton histoire !
 
 ```blocks
+function naufrage() {
+    basic.showLeds(`
+        . . . . .
+        . . # . .
+        . . # # .
+        . . # . #
+        # # # # #
+        `)
+    basic.pause(400)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . # . .
+        . . # # .
+        . . # . #
+        `)
+    basic.pause(400)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . # . .
+        . . # # .
+        `)
+    basic.pause(400)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . # . .
+        `)
+    basic.pause(600)
+    basic.clearScreen()
+}
 input.onGesture(Gesture.Shake, function () {
     naufrage()
 })
@@ -293,7 +509,7 @@ basic.showLeds(`
 
 ## Étape 16 — Question réflexive 🤔
 
-❓ **La fonction `navigation` ne contient aucun bloc ``||basic:montrer LEDs||`` — pourtant elle affiche cinq images. Comment est-ce possible ?**
+❓ **La fonction `navigation` ne contient aucun bloc ``||basic:montrer LEDs||`` — pourtant elle affiche trois images. Comment est-ce possible ?**
 
 ❓ **Si tu voulais que la tempête dure plus longtemps, quelle est la seule valeur à changer dans ton programme ?**
 
@@ -316,6 +532,94 @@ basic.showLeds(`
 ➡️ Déclenche `histoire` avec une inclinaison à gauche ``||input:lorsque incliné à gauche||``.
 
 ```blocks
+function repos() {
+    basic.showLeds(`
+        . . # . .
+        . . # # .
+        . . # . #
+        # # # # #
+        . # # # .
+        `)
+    basic.pause(500)
+}
+function vague() {
+    basic.showLeds(`
+        . . # . .
+        . . # # .
+        . . # . #
+        # # # # #
+        # # # . .
+        `)
+    basic.pause(400)
+}
+function creux() {
+    basic.showLeds(`
+        . . # . .
+        . . # # .
+        . . # . #
+        # # # # #
+        # . # . #
+        `)
+    basic.pause(400)
+}
+function navigation() {
+    repos()
+    vague()
+    creux()
+}
+function eclair() {
+    basic.showLeds(`
+        # # . # #
+        . # . # .
+        . # # # .
+        . . # . .
+        . . # . .
+        `)
+    basic.pause(150)
+    basic.clearScreen()
+    basic.pause(150)
+}
+function tempete() {
+    for (let index = 0; index < 3; index++) {
+        eclair()
+        navigation()
+    }
+}
+function naufrage() {
+    basic.showLeds(`
+        . . . . .
+        . . # . .
+        . . # # .
+        . . # . #
+        # # # # #
+        `)
+    basic.pause(400)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . # . .
+        . . # # .
+        . . # . #
+        `)
+    basic.pause(400)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . # . .
+        . . # # .
+        `)
+    basic.pause(400)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . # . .
+        `)
+    basic.pause(600)
+    basic.clearScreen()
+}
 function histoire() {
     navigation()
     tempete()
