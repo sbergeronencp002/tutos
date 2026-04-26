@@ -16,13 +16,13 @@ C'est parti ! 🚀
 
 > 💡 On garde le bloc ``||basic:au démarrage||`` — on va s'en servir à la toute fin !
 
-## Étape 2 — Créer la fonction `brasLeves`
+## Étape 2 — Créer la fonction `Bras`
 
 ✨ Nouvelle notion : la **fonction** !
 
 ➡️ Clique sur **Fonctions** dans le menu, puis sur **Créer une fonction**.
 
-➡️ Nomme-la `brasLeves`.
+➡️ Nomme-la `Bras`.
 
 > 💡 Une **fonction**, c'est comme une recette à laquelle tu donnes un nom. Tu écris les instructions une seule fois, et tu peux les utiliser autant de fois que tu veux dans ton programme !
 
@@ -30,14 +30,14 @@ C'est parti ! 🚀
 
 ✨ Remplis ta première fonction !
 
-➡️ Glisse le bloc ``||basic:montrer LEDs||`` à l'intérieur du bloc ``||fonctions:fonction brasLeves||``.
+➡️ Glisse le bloc ``||basic:montrer LEDs||`` à l'intérieur du bloc ``||fonctions:fonction Bras||``.
 
 ➡️ Reproduis le dessin ci-dessous — le personnage avec les bras **levés** en V.
 
 ➡️ Glisse ensuite un bloc ``||basic:pause (ms) 100||`` en dessous et remplace la valeur par `400`.
 
 ```blocks
-function brasLeves() {
+function Bras() {
     basic.showLeds(`
         . . # . .
         # . # . #
@@ -49,26 +49,26 @@ function brasLeves() {
 }
 ```
 
-## Étape 4 — Créer la fonction `brasBasJambesEcartees`
+## Étape 4 — Créer la fonction `Jambes`
 
 ✨ Crée ta deuxième fonction !
 
 ➡️ Clique sur **Fonctions** dans le menu, puis sur **Créer une fonction**.
 
-➡️ Nomme-la `brasBasJambesEcartees`.
+➡️ Nomme-la `Jambes`.
 
 ## Étape 5 — Dessiner le personnage bras bas, jambes écartées
 
 ✨ Remplis ta deuxième fonction !
 
-➡️ Glisse le bloc ``||basic:montrer LEDs||`` à l'intérieur du bloc ``||fonctions:fonction brasBasJambesEcartees||``.
+➡️ Glisse le bloc ``||basic:montrer LEDs||`` à l'intérieur du bloc ``||fonctions:fonction Jambes||``.
 
 ➡️ Reproduis le dessin ci-dessous — le personnage avec les bras **baissés** et les jambes **écartées**.
 
 ➡️ Glisse ensuite un bloc ``||basic:pause (ms) 100||`` en dessous et remplace la valeur par `400`.
 
 ```blocks
-function brasBasJambesEcartees() {
+function Jambes() {
     basic.showLeds(`
         . . # . .
         . # # # .
@@ -84,14 +84,14 @@ function brasBasJambesEcartees() {
 
 ✨ Associe chaque fonction à un bouton !
 
-➡️ Glisse le bloc ``||fonctions:appeler brasLeves||`` à l'intérieur du bloc ``||input:lorsque le bouton A est pressé||``.
+➡️ Glisse le bloc ``||fonctions:appeler Bras||`` à l'intérieur du bloc ``||input:lorsque le bouton A est pressé||``.
 
-➡️ Glisse le bloc ``||fonctions:appeler brasBasJambesEcartees||`` à l'intérieur du bloc ``||input:lorsque le bouton B est pressé||``.
+➡️ Glisse le bloc ``||fonctions:appeler Jambes||`` à l'intérieur du bloc ``||input:lorsque le bouton B est pressé||``.
 
 > 💡 **Appeler** une fonction, c'est lui dire : *"Exécute-toi maintenant !"* En appuyant sur **A**, tu vois les bras levés. En appuyant sur **B**, tu vois les bras bas et les jambes écartées.
 
 ```blocks
-function brasLeves() {
+function Bras() {
     basic.showLeds(`
         . . # . .
         # . # . #
@@ -101,7 +101,7 @@ function brasLeves() {
         `)
     basic.pause(400)
 }
-function brasBasJambesEcartees() {
+function Jambes() {
     basic.showLeds(`
         . . # . .
         . # # # .
@@ -112,10 +112,10 @@ function brasBasJambesEcartees() {
     basic.pause(400)
 }
 input.onButtonPressed(Button.A, function () {
-    brasLeves()
+    Bras()
 })
 input.onButtonPressed(Button.B, function () {
-    brasBasJambesEcartees()
+    Jambes()
 })
 ```
 
@@ -138,13 +138,13 @@ input.onButtonPressed(Button.B, function () {
 ➡️ Remplace la valeur `4` par `6`.
 
 ➡️ À l'intérieur de la boucle, glisse successivement :
-- ``||fonctions:appeler brasLeves||``
-- ``||fonctions:appeler brasBasJambesEcartees||``
+- ``||fonctions:appeler Bras||``
+- ``||fonctions:appeler Jambes||``
 
 > 💡 La boucle appelle tes deux fonctions en alternance **6 fois** — le personnage fait **6 jumping jacks** ! Tu n'as pas besoin de réécrire les dessins — les fonctions s'en chargent !
 
 ```blocks
-function brasLeves() {
+function Bras() {
     basic.showLeds(`
         . . # . .
         # . # . #
@@ -154,7 +154,7 @@ function brasLeves() {
         `)
     basic.pause(400)
 }
-function brasBasJambesEcartees() {
+function Jambes() {
     basic.showLeds(`
         . . # . .
         . # # # .
@@ -165,15 +165,15 @@ function brasBasJambesEcartees() {
     basic.pause(400)
 }
 input.onButtonPressed(Button.A, function () {
-    brasLeves()
+    Bras()
 })
 input.onButtonPressed(Button.B, function () {
-    brasBasJambesEcartees()
+    Jambes()
 })
 input.onButtonPressed(Button.AB, function () {
     for (let index = 0; index < 6; index++) {
-        brasLeves()
-        brasBasJambesEcartees()
+        Bras()
+        Jambes()
     }
 })
 ```
@@ -189,7 +189,7 @@ input.onButtonPressed(Button.AB, function () {
 > 💡 Au démarrage, le micro:bit affiche le personnage **au repos**, avant que tu appuies sur un bouton. C'est sa position de départ !
 
 ```blocks
-function brasLeves() {
+function Bras() {
     basic.showLeds(`
         . . # . .
         # . # . #
@@ -199,7 +199,7 @@ function brasLeves() {
         `)
     basic.pause(400)
 }
-function brasBasJambesEcartees() {
+function Jambes() {
     basic.showLeds(`
         . . # . .
         . # # # .
@@ -217,15 +217,15 @@ basic.showLeds(`
     . # . # .
     `)
 input.onButtonPressed(Button.A, function () {
-    brasLeves()
+    Bras()
 })
 input.onButtonPressed(Button.B, function () {
-    brasBasJambesEcartees()
+    Jambes()
 })
 input.onButtonPressed(Button.AB, function () {
     for (let index = 0; index < 6; index++) {
-        brasLeves()
-        brasBasJambesEcartees()
+        Bras()
+        Jambes()
     }
 })
 ```
@@ -264,12 +264,12 @@ input.onButtonPressed(Button.AB, function () {
 
 ## Étape 14 — Défi avancé 🧠
 
-➡️ Crée une troisième fonction `repose` qui affiche le personnage debout, bras le long du corps.
+➡️ Crée une troisième fonction `Gym` qui affiche le personnage debout, bras le long du corps.
 
-➡️ Dans la boucle du bouton **A+B**, appelle `repose` à la toute fin, après les 6 jumping jacks.
+➡️ Dans la boucle du bouton **A+B**, appelle `Gym` à la toute fin, après les 6 jumping jacks.
 
 ```blocks
-function brasLeves() {
+function Bras() {
     basic.showLeds(`
         . . # . .
         # . # . #
@@ -279,7 +279,7 @@ function brasLeves() {
         `)
     basic.pause(400)
 }
-function brasBasJambesEcartees() {
+function Jambes() {
     basic.showLeds(`
         . . # . .
         . # # # .
@@ -289,7 +289,7 @@ function brasBasJambesEcartees() {
         `)
     basic.pause(400)
 }
-function repose() {
+function Gym() {
     basic.showLeds(`
         . . # . .
         . # # # .
@@ -306,17 +306,17 @@ basic.showLeds(`
     . # . # .
     `)
 input.onButtonPressed(Button.A, function () {
-    brasLeves()
+    Bras()
 })
 input.onButtonPressed(Button.B, function () {
-    brasBasJambesEcartees()
+    Jambes()
 })
 input.onButtonPressed(Button.AB, function () {
     for (let index = 0; index < 6; index++) {
-        brasLeves()
-        brasBasJambesEcartees()
+        Bras()
+        Jambes()
     }
-    repose()
+    Gym()
 })
 ```
 
