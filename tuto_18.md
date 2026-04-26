@@ -96,6 +96,36 @@ function ailesBas() {
 > 💡 `vol` ne dessine rien elle-même — elle **orchestre** les trois positions pour simuler un battement d'ailes complet, du repos en haut jusqu'au repos en bas !
 
 ```blocks
+function ailesHaut() {
+    basic.showLeds(`
+        # . # . #
+        # # # # #
+        . . # . .
+        . # . # .
+        . . . . .
+        `)
+    basic.pause(300)
+}
+function ailesMilieu() {
+    basic.showLeds(`
+        . . . . .
+        # # # # #
+        . # # # .
+        . . # . .
+        . . . . .
+        `)
+    basic.pause(300)
+}
+function ailesBas() {
+    basic.showLeds(`
+        . . . . .
+        . # . # .
+        . . # . .
+        # # # # #
+        # . # . #
+        `)
+    basic.pause(300)
+}
 function vol() {
     ailesMilieu()
     ailesHaut()
@@ -120,6 +150,36 @@ function vol() {
 > 💡 En appelant `ailesHaut` et `ailesBas` directement sans passer par `ailesMilieu`, le battement est **deux fois plus rapide** — comme une chauve-souris en plein sprint !
 
 ```blocks
+function ailesHaut() {
+    basic.showLeds(`
+        # . # . #
+        # # # # #
+        . . # . .
+        . # . # .
+        . . . . .
+        `)
+    basic.pause(300)
+}
+function ailesMilieu() {
+    basic.showLeds(`
+        . . . . .
+        # # # # #
+        . # # # .
+        . . # . .
+        . . . . .
+        `)
+    basic.pause(300)
+}
+function ailesBas() {
+    basic.showLeds(`
+        . . . . .
+        . # . # .
+        . . # . .
+        # # # # #
+        # . # . #
+        `)
+    basic.pause(300)
+}
 function chasse() {
     for (let index = 0; index < 5; index++) {
         ailesHaut()
@@ -186,6 +246,43 @@ function plonger() {
 ➡️ À l'intérieur, appelle `vol`.
 
 ```blocks
+function ailesHaut() {
+    basic.showLeds(`
+        # . # . #
+        # # # # #
+        . . # . .
+        . # . # .
+        . . . . .
+        `)
+    basic.pause(300)
+}
+function ailesMilieu() {
+    basic.showLeds(`
+        . . . . .
+        # # # # #
+        . # # # .
+        . . # . .
+        . . . . .
+        `)
+    basic.pause(300)
+}
+function ailesBas() {
+    basic.showLeds(`
+        . . . . .
+        . # . # .
+        . . # . .
+        # # # # #
+        # . # . #
+        `)
+    basic.pause(300)
+}
+function vol() {
+    ailesMilieu()
+    ailesHaut()
+    ailesMilieu()
+    ailesBas()
+    ailesMilieu()
+}
 input.onButtonPressed(Button.A, function () {
     vol()
 })
@@ -198,6 +295,41 @@ input.onButtonPressed(Button.A, function () {
 ➡️ À l'intérieur, appelle `plonger`.
 
 ```blocks
+function plonger() {
+    basic.showLeds(`
+        . . . . .
+        # . # . #
+        # # # # #
+        . . # . .
+        . # . # .
+        `)
+    basic.pause(300)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        # . # . #
+        # # # # #
+        . . # . .
+        `)
+    basic.pause(300)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        # . # . #
+        # # # # #
+        `)
+    basic.pause(300)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        # . # . #
+        `)
+    basic.pause(300)
+    basic.clearScreen()
+}
 input.onButtonPressed(Button.B, function () {
     plonger()
 })
@@ -210,6 +342,91 @@ input.onButtonPressed(Button.B, function () {
 ➡️ À l'intérieur, appelle `chasse`.
 
 ```blocks
+function ailesHaut() {
+    basic.showLeds(`
+        # . # . #
+        # # # # #
+        . . # . .
+        . # . # .
+        . . . . .
+        `)
+    basic.pause(300)
+}
+function ailesMilieu() {
+    basic.showLeds(`
+        . . . . .
+        # # # # #
+        . # # # .
+        . . # . .
+        . . . . .
+        `)
+    basic.pause(300)
+}
+function ailesBas() {
+    basic.showLeds(`
+        . . . . .
+        . # . # .
+        . . # . .
+        # # # # #
+        # . # . #
+        `)
+    basic.pause(300)
+}
+function vol() {
+    ailesMilieu()
+    ailesHaut()
+    ailesMilieu()
+    ailesBas()
+    ailesMilieu()
+}
+function plonger() {
+    basic.showLeds(`
+        . . . . .
+        # . # . #
+        # # # # #
+        . . # . .
+        . # . # .
+        `)
+    basic.pause(300)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        # . # . #
+        # # # # #
+        . . # . .
+        `)
+    basic.pause(300)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        # . # . #
+        # # # # #
+        `)
+    basic.pause(300)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        # . # . #
+        `)
+    basic.pause(300)
+    basic.clearScreen()
+}
+function chasse() {
+    for (let index = 0; index < 5; index++) {
+        ailesHaut()
+        ailesBas()
+    }
+    ailesMilieu()
+}
+input.onButtonPressed(Button.A, function () {
+    vol()
+})
+input.onButtonPressed(Button.B, function () {
+    plonger()
+})
 input.onButtonPressed(Button.AB, function () {
     chasse()
 })
@@ -224,13 +441,17 @@ input.onButtonPressed(Button.AB, function () {
 > 💡 Dès l'allumage, la chauve-souris apparaît en vol plané — prête à partir chasser !
 
 ```blocks
-basic.showLeds(`
-    . . . . .
-    # # # # #
-    . # # # .
-    . . # . .
-    . . . . .
-    `)
+function ailesMilieu() {
+    basic.showLeds(`
+        . . . . .
+        # # # # #
+        . # # # .
+        . . # . .
+        . . . . .
+        `)
+    basic.pause(300)
+}
+ailesMilieu()
 ```
 
 ## Étape 12 — Vérifier sur le simulateur
@@ -274,6 +495,51 @@ basic.showLeds(`
 ➡️ Appelle `surgir` avec une inclinaison ``||input:lorsque incliné à gauche||``, puis `plonger` avec une inclinaison ``||input:lorsque incliné à droite||``.
 
 ```blocks
+function ailesMilieu() {
+    basic.showLeds(`
+        . . . . .
+        # # # # #
+        . # # # .
+        . . # . .
+        . . . . .
+        `)
+    basic.pause(300)
+}
+function plonger() {
+    basic.showLeds(`
+        . . . . .
+        # . # . #
+        # # # # #
+        . . # . .
+        . # . # .
+        `)
+    basic.pause(300)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        # . # . #
+        # # # # #
+        . . # . .
+        `)
+    basic.pause(300)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        # . # . #
+        # # # # #
+        `)
+    basic.pause(300)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        # . # . #
+        `)
+    basic.pause(300)
+    basic.clearScreen()
+}
 function surgir() {
     basic.showLeds(`
         . . . . .
@@ -309,6 +575,12 @@ function surgir() {
     basic.pause(300)
     ailesMilieu()
 }
+input.onGesture(Gesture.TiltLeft, function () {
+    surgir()
+})
+input.onGesture(Gesture.TiltRight, function () {
+    plonger()
+})
 ```
 
 > ❓ Est-ce que la chauve-souris surgit bien de l'obscurité et disparaît dans la nuit quand tu inclines le micro:bit ?
