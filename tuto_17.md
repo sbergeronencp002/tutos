@@ -168,7 +168,7 @@ function tempete() {
 ```blocks
 function naufrage() {
     basic.showLeds(`
-        # # # # #
+        . . . . .
         . . # . .
         . . # # .
         . . # . #
@@ -176,26 +176,26 @@ function naufrage() {
         `)
     basic.pause(400)
     basic.showLeds(`
-        # # # # #
-        # # # # #
+        . . . . .
+        . . . . .
         . . # . .
         . . # # .
         . . # . #
         `)
     basic.pause(400)
     basic.showLeds(`
-        # # # # #
-        # # # # #
-        # # # # #
+        . . . . .
+        . . . . .
+        . . . . .
         . . # . .
         . . # # .
         `)
     basic.pause(400)
     basic.showLeds(`
-        # # # # #
-        # # # # #
-        # # # # #
-        # # # # #
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
         . . # . .
         `)
     basic.pause(600)
