@@ -190,15 +190,13 @@ input.onGesture(Gesture.Shake, function () {
 
 > 💡 Avec trois blocs ``||logic:si||`` séparés, le programme vérifie **toujours** les trois conditions une par une — même si la première est vraie. C'est différent du **sinon si**, qui s'arrête dès qu'une condition est vraie !
 
-## Étape 10 — Défi supplémentaire 🧠
-
-**Défi de base :**
+## Étape 10 — Défi de base 🧠
 
 ➡️ Améliore les dessins de la pierre, du papier et des ciseaux pour qu'ils soient plus reconnaissables.
 
 > ❓ Peux-tu dessiner des ciseaux ouverts et des ciseaux fermés en alternance pour créer une petite animation ?
 
-**Défi avancé :**
+## Étape 11 — Défi avancé 🧠
 
 ➡️ Ajoute un bloc ``||basic:afficher texte||`` après chaque dessin pour afficher le nom du choix (`"Pierre"`, `"Papier"` ou `"Ciseaux"`).
 

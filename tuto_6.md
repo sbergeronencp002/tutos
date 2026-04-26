@@ -113,15 +113,13 @@ input.onButtonPressed(Button.AB, function () {
 
 > 💡 Une variable n'a pas de limite — elle peut monter très haut ou descendre en dessous de zéro !
 
-## Étape 9 — Défi supplémentaire 🧠
-
-**Défi de base :**
+## Étape 9 — Défi de base 🧠
 
 ➡️ Modifie le programme pour compter par `2` au lieu de `1` à chaque appui sur **A**.
 
 > ❓ Que dois-tu changer dans ton programme ?
 
-**Défi avancé :**
+## Étape 10 — Défi avancé 🧠
 
 ➡️ Affiche l'icône d'un trophée 🏆 lorsque `compteur` atteint `10`.
 

@@ -121,9 +121,7 @@ input.onGesture(Gesture.Shake, function () {
 
 > 💡 Tu peux aussi tester la secousse sur le **simulateur** en cliquant sur le bouton **SHAKE** !
 
-## Étape 10 — Défi supplémentaire 🧠
-
-**Défi de base :**
+## Étape 10 — Défi de base 🧠
 
 ➡️ Modifie la valeur des pauses pour accélérer ou ralentir le battement de cœur.
 
@@ -131,7 +129,7 @@ input.onGesture(Gesture.Shake, function () {
 
 > ❓ Quelle combinaison donne l'animation la plus réaliste ?
 
-**Défi avancé :**
+## Étape 11 — Défi avancé 🧠
 
 ➡️ Ajoute un bloc ``||basic:effacer l'écran||`` et une pause à la fin de la boucle pour ajouter un moment de silence entre chaque battement.
 

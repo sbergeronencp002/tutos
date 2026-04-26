@@ -102,9 +102,7 @@ input.onGesture(Gesture.TiltRight, function () {
 
 > 💡 C'est le même principe — le micro:bit **attend un événement** avant de réagir. La seule différence, c'est que l'événement est une inclinaison plutôt qu'un appui sur un bouton !
 
-## Étape 9 — Défi supplémentaire 🧠
-
-**Défi de base :**
+## Étape 9 — Défi de base 🧠
 
 ➡️ Ajoute une séquence pour l'événement ``||input:lorsque face vers le haut||`` — affiche un visage heureux 😊 quand le micro:bit est posé à plat.
 
@@ -116,7 +114,7 @@ input.onGesture(Gesture.FaceUp, function () {
 
 > ❓ Que se passe-t-il si tu poses le micro:bit à plat sur une table ?
 
-**Défi avancé :**
+## Étape 10 — Défi avancé 🧠
 
 ➡️ Ajoute un bloc ``||basic:afficher texte||`` après chaque flèche pour afficher le nom de la direction.
 

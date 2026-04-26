@@ -143,15 +143,13 @@ basic.forever(function () {
 
 > 💡 Chaque environnement est différent — une salle de classe bien éclairée n'a pas la même luminosité qu'une pièce sombre. C'est pourquoi on observe d'abord les valeurs avant de choisir le seuil !
 
-## Étape 10 — Défi supplémentaire 🧠
-
-**Défi de base :**
+## Étape 10 — Défi de base 🧠
 
 ➡️ Modifie le seuil de `100` pour qu'il corresponde mieux à la luminosité de ta classe.
 
 > ❓ Quelle valeur donne le meilleur résultat dans ton environnement ?
 
-**Défi avancé :**
+## Étape 11 — Défi avancé 🧠
 
 ➡️ Ajoute une troisième condition pour une luminosité **moyenne** — affiche une icône différente quand la luminosité est entre `50` et `150`.
 

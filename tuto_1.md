@@ -106,9 +106,7 @@ basic.forever(function () {
 
 > 💡 Dans ``||basic:au démarrage||``, le texte s'affiche une seule fois au démarrage puis disparaît. L'écran LED du micro:bit ne supporte pas les caractères accentués — utilise uniquement des lettres sans accents pour un affichage correct !
 
-## Étape 10 — Défi supplémentaire 🧠
-
-**Défi de base :**
+## Étape 10 — Défi de base 🧠
 
 ➡️ Utilise le bloc ``||basic:au démarrage||`` pour afficher ton **nom de famille** une seule fois au démarrage.
 
@@ -126,7 +124,7 @@ basic.forever(function () {
 
 > ❓ Que se passe-t-il au démarrage ? Et ensuite ? Vois-tu la différence entre les deux blocs ?
 
-**Défi avancé :**
+## Étape 11 — Défi avancé 🧠
 
 ➡️ Utilise le bloc ``||basic:au démarrage||`` pour afficher ton **nom de famille**.
 

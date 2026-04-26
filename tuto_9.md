@@ -171,15 +171,13 @@ input.onButtonPressed(Button.B, function () {
 
 > 💡 Le micro:bit ne peut exécuter qu'une séquence à la fois. Si tu appuies sur un bouton pendant qu'une boucle est en cours, il devra attendre que la boucle se termine avant de réagir !
 
-## Étape 11 — Défi supplémentaire 🧠
-
-**Défi de base :**
+## Étape 11 — Défi de base 🧠
 
 ➡️ Modifie la minuterie pour qu'elle compte à rebours de `20` secondes au lieu de `10`.
 
 > ❓ Quels éléments de ton programme dois-tu modifier ?
 
-**Défi avancé :**
+## Étape 12 — Défi avancé 🧠
 
 ➡️ Ajoute une condition pour afficher une icône d'avertissement quand il reste `3` secondes ou moins.
 

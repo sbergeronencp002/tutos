@@ -54,9 +54,7 @@ basic.forever(function () {
 
 > 💡 Sans pause, les icônes changent si vite qu'on ne peut pas les distinguer — l'animation devient floue ! Une icône est une image prédéfinie, tandis qu'un texte fait défiler des caractères un par un.
 
-## Étape 6 — Défi supplémentaire 🧠
-
-**Défi de base :**
+## Étape 6 — Défi de base 🧠
 
 ➡️ Ajoute **deux autres** blocs ``||basic:montrer l'icône||`` pour afficher trois icônes différentes en séquence.
 
@@ -70,7 +68,7 @@ basic.forever(function () {
 })
 ```
 
-**Défi avancé :**
+## Étape 7 — Défi avancé 🧠
 
 ⏱️ L'animation va trop vite ? Ajoute des pauses !
 

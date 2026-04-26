@@ -158,15 +158,13 @@ input.onGesture(Gesture.Shake, function () {
 
 > 💡 Rien de fondamental — le principe est exactement le même ! Plus il y a de cas possibles, plus on ajoute de conditions. C'est la puissance des conditions : elles s'adaptent à n'importe quelle situation.
 
-## Étape 9 — Défi supplémentaire 🧠
-
-**Défi de base :**
+## Étape 9 — Défi de base 🧠
 
 ➡️ Améliore les dessins des six faces pour qu'ils ressemblent encore plus à un vrai dé.
 
 > ❓ Les points sont-ils bien placés par rapport à un vrai dé ?
 
-**Défi avancé :**
+## Étape 10 — Défi avancé 🧠
 
 ➡️ Ajoute une animation de "lancer" avant d'afficher le résultat.
 
