@@ -39,11 +39,11 @@ C'est parti ! 🚀
 ```blocks
 function Bras() {
     basic.showLeds(`
-        . # . # .
-        . . # . .
+        # . # . #
         . # # # .
         . . # . .
-        . . # . .
+        . # . # .
+        # . . . #
         `)
     basic.pause(400)
 }
@@ -73,7 +73,7 @@ function Jambes() {
         . . # . .
         # # # # #
         . . # . .
-        # . . . #
+        . # . # .
         # . . . #
         `)
     basic.pause(400)
@@ -93,11 +93,11 @@ function Jambes() {
 ```blocks
 function Bras() {
     basic.showLeds(`
-        . # . # .
-        . . # . .
+        # . # . #
         . # # # .
         . . # . .
-        . . # . .
+        . # . # .
+        # . . . #
         `)
     basic.pause(400)
 }
@@ -106,7 +106,7 @@ function Jambes() {
         . . # . .
         # # # # #
         . . # . .
-        # . . . #
+        . # . # .
         # . . . #
         `)
     basic.pause(400)
@@ -146,11 +146,11 @@ input.onButtonPressed(Button.B, function () {
 ```blocks
 function Bras() {
     basic.showLeds(`
-        . # . # .
-        . . # . .
+        # . # . #
         . # # # .
         . . # . .
-        . . # . .
+        . # . # .
+        # . . . #
         `)
     basic.pause(400)
 }
@@ -159,7 +159,7 @@ function Jambes() {
         . . # . .
         # # # # #
         . . # . .
-        # . . . #
+        . # . # .
         # . . . #
         `)
     basic.pause(400)
@@ -191,11 +191,11 @@ input.onButtonPressed(Button.AB, function () {
 ```blocks
 function Bras() {
     basic.showLeds(`
-        . # . # .
-        . . # . .
+        # . # . #
         . # # # .
         . . # . .
-        . . # . .
+        . # . # .
+        # . . . #
         `)
     basic.pause(400)
 }
@@ -204,7 +204,7 @@ function Jambes() {
         . . # . .
         # # # # #
         . . # . .
-        # . . . #
+        . # . # .
         # . . . #
         `)
     basic.pause(400)
@@ -212,9 +212,9 @@ function Jambes() {
 basic.showLeds(`
     . . # . .
     . # # # .
-    . . # . .
+    . # # # .
     . # . # .
-    . # . # .
+    # . . . #
     `)
 input.onButtonPressed(Button.A, function () {
     Bras()
@@ -271,11 +271,11 @@ input.onButtonPressed(Button.AB, function () {
 ```blocks
 function Bras() {
     basic.showLeds(`
-        . # . # .
-        . . # . .
+        # . # . #
         . # # # .
         . . # . .
-        . . # . .
+        . # . # .
+        # . . . #
         `)
     basic.pause(400)
 }
@@ -284,7 +284,7 @@ function Jambes() {
         . . # . .
         # # # # #
         . . # . .
-        # . . . #
+        . # . # .
         # . . . #
         `)
     basic.pause(400)
@@ -293,17 +293,17 @@ function Gym() {
     basic.showLeds(`
         . . # . .
         . # # # .
-        . . # . .
+        . # # # .
         . # . # .
-        . # . # .
+        # . . . #
         `)
 }
 basic.showLeds(`
     . . # . .
     . # # # .
-    . . # . .
+    . # # # .
     . # . # .
-    . # . # .
+    # . . . #
     `)
 input.onButtonPressed(Button.A, function () {
     Bras()
