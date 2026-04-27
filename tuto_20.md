@@ -41,20 +41,20 @@ function graine() {
 
 ## Étape 3 — La fonction `bourgeon`
 
-🌿 La tige pousse !
+🌿 La tige pousse, un bouton se forme !
 
 ➡️ Crée une fonction et nomme-la `bourgeon`.
 
-➡️ Un bourgeon fermé apparaît en haut d'une tige. Reproduis le dessin et ajoute une pause de `500` ms.
+➡️ Un bourgeon ovale apparaît en haut d'une tige. Reproduis le dessin et ajoute une pause de `500` ms.
 
-> 💡 La tige monte depuis le bas — la fleur cherche la lumière !
+> 💡 Deux rangées pour le bourgeon lui donnent une forme ovale — la fleur est encore fermée, mais elle gonfle !
 
 ```blocks
 function bourgeon() {
     basic.showLeds(`
         . . # . .
         . # # # .
-        . . # . .
+        . # # # .
         . . # . .
         . . # . .
         `)
@@ -133,7 +133,7 @@ function bourgeon() {
     basic.showLeds(`
         . . # . .
         . # # # .
-        . . # . .
+        . # # # .
         . . # . .
         . . # . .
         `)
@@ -156,173 +156,15 @@ function cycle_vie() {
 }
 ```
 
-## Étape 7 — Bouton A : cycle_vie
+## Étape 7 — Capteur de lumière 💡
 
-➡️ Glisse le bloc ``||input:lorsque le bouton A est pressé||`` dans l'espace de travail.
+☀️🌑 La fleur réagit automatiquement à la lumière !
 
-➡️ À l'intérieur, appelle `cycle_vie`.
+➡️ Glisse le bloc ``||input:lorsque (sombre)||`` dans l'espace de travail. À l'intérieur, appelle `fanee`.
 
-```blocks
-function graine() {
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        . . # . .
-        . # # # .
-        `)
-    basic.pause(500)
-}
-function bourgeon() {
-    basic.showLeds(`
-        . . # . .
-        . # # # .
-        . . # . .
-        . . # . .
-        . . # . .
-        `)
-    basic.pause(500)
-}
-function fleur() {
-    basic.showLeds(`
-        . # . # .
-        # # # # #
-        . # # # .
-        . . # . .
-        . . # . .
-        `)
-    basic.pause(500)
-}
-function cycle_vie() {
-    graine()
-    bourgeon()
-    fleur()
-}
-input.onButtonPressed(Button.A, function () {
-    cycle_vie()
-})
-```
+➡️ Glisse le bloc ``||input:lorsque (lumineux)||`` dans l'espace de travail. À l'intérieur, appelle `fleur`.
 
-## Étape 8 — Bouton B : fanee
-
-➡️ Glisse le bloc ``||input:lorsque le bouton B est pressé||`` dans l'espace de travail.
-
-➡️ À l'intérieur, appelle `fanee`.
-
-```blocks
-function fanee() {
-    basic.showLeds(`
-        . # # . .
-        # . # . .
-        . . # . .
-        . . # . .
-        . . # . .
-        `)
-    basic.pause(500)
-}
-input.onButtonPressed(Button.B, function () {
-    fanee()
-})
-```
-
-## Étape 9 — Bouton A+B : fleur
-
-➡️ Glisse le bloc ``||input:lorsque le bouton A+B est pressé||`` dans l'espace de travail.
-
-➡️ À l'intérieur, appelle `fleur`.
-
-```blocks
-function graine() {
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        . . # . .
-        . # # # .
-        `)
-    basic.pause(500)
-}
-function bourgeon() {
-    basic.showLeds(`
-        . . # . .
-        . # # # .
-        . . # . .
-        . . # . .
-        . . # . .
-        `)
-    basic.pause(500)
-}
-function fleur() {
-    basic.showLeds(`
-        . # . # .
-        # # # # #
-        . # # # .
-        . . # . .
-        . . # . .
-        `)
-    basic.pause(500)
-}
-function fanee() {
-    basic.showLeds(`
-        . # # . .
-        # . # . .
-        . . # . .
-        . . # . .
-        . . # . .
-        `)
-    basic.pause(500)
-}
-function cycle_vie() {
-    graine()
-    bourgeon()
-    fleur()
-}
-input.onButtonPressed(Button.A, function () {
-    cycle_vie()
-})
-input.onButtonPressed(Button.B, function () {
-    fanee()
-})
-input.onButtonPressed(Button.AB, function () {
-    fleur()
-})
-```
-
-## Étape 10 — Capteur de lumière : sombre → fanee
-
-🌑 La fleur réagit à l'obscurité !
-
-➡️ Glisse le bloc ``||input:lorsque (sombre)||`` dans l'espace de travail.
-
-➡️ À l'intérieur, appelle `fanee`.
-
-> 💡 Le micro:bit utilise ses LEDs comme **capteur de lumière** ! Quand l'obscurité est détectée, la fleur se fane automatiquement — comme une vraie plante privée de soleil !
-
-```blocks
-function fanee() {
-    basic.showLeds(`
-        . # # . .
-        # . # . .
-        . . # . .
-        . . # . .
-        . . # . .
-        `)
-    basic.pause(500)
-}
-input.onLightConditionChanged(LightCondition.Dark, function () {
-    fanee()
-})
-```
-
-## Étape 11 — Capteur de lumière : lumineux → fleur
-
-☀️ La fleur s'épanouit à la lumière !
-
-➡️ Glisse le bloc ``||input:lorsque (lumineux)||`` dans l'espace de travail.
-
-➡️ À l'intérieur, appelle `fleur`.
-
-> 💡 Couvre le micro:bit avec ta main pour créer de l'ombre — la fleur se fane ! Découvre-le — elle refleurit ! C'est le même composant LEDs qui affiche et qui mesure la lumière.
+> 💡 Le micro:bit utilise ses LEDs comme **capteur de lumière** ! Couvre-le avec ta main — la fleur se fane. Découvre-le — elle refleurit ! C'est le même composant qui affiche et qui mesure.
 
 ```blocks
 function fleur() {
@@ -353,7 +195,92 @@ input.onLightConditionChanged(LightCondition.Bright, function () {
 })
 ```
 
-## Étape 12 — Afficher la graine au démarrage
+## Étape 8 — Bouton A : cycle_vie
+
+➡️ Glisse le bloc ``||input:lorsque le bouton A est pressé||`` dans l'espace de travail.
+
+➡️ À l'intérieur, appelle `cycle_vie`.
+
+```blocks
+function graine() {
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . # . .
+        . # # # .
+        `)
+    basic.pause(500)
+}
+function bourgeon() {
+    basic.showLeds(`
+        . . # . .
+        . # # # .
+        . # # # .
+        . . # . .
+        . . # . .
+        `)
+    basic.pause(500)
+}
+function fleur() {
+    basic.showLeds(`
+        . # . # .
+        # # # # #
+        . # # # .
+        . . # . .
+        . . # . .
+        `)
+    basic.pause(500)
+}
+function fanee() {
+    basic.showLeds(`
+        . # # . .
+        # . # . .
+        . . # . .
+        . . # . .
+        . . # . .
+        `)
+    basic.pause(500)
+}
+function cycle_vie() {
+    graine()
+    bourgeon()
+    fleur()
+}
+input.onLightConditionChanged(LightCondition.Dark, function () {
+    fanee()
+})
+input.onLightConditionChanged(LightCondition.Bright, function () {
+    fleur()
+})
+input.onButtonPressed(Button.A, function () {
+    cycle_vie()
+})
+```
+
+## Étape 9 — Bouton B : fanee
+
+➡️ Glisse le bloc ``||input:lorsque le bouton B est pressé||`` dans l'espace de travail.
+
+➡️ À l'intérieur, appelle `fanee`.
+
+```blocks
+function fanee() {
+    basic.showLeds(`
+        . # # . .
+        # . # . .
+        . . # . .
+        . . # . .
+        . . # . .
+        `)
+    basic.pause(500)
+}
+input.onButtonPressed(Button.B, function () {
+    fanee()
+})
+```
+
+## Étape 10 — Afficher la graine au démarrage
 
 ✨ La scène de départ !
 
@@ -375,19 +302,19 @@ function graine() {
 graine()
 ```
 
-## Étape 13 — Vérifier sur le simulateur
+## Étape 11 — Vérifier sur le simulateur
 
 🖥️ Teste toute la fleur !
 
 ➡️ Vérifie que la graine s'affiche bien au démarrage.
 
-➡️ Appuie sur **A** — le cycle de vie complet. Sur **B** — la fleur se fane. Sur **A+B** — floraison directe !
+➡️ Appuie sur **A** — le cycle de vie complet. Sur **B** — la fleur se fane.
 
 ➡️ Clique sur l'ampoule 💡 du simulateur pour simuler l'obscurité — est-ce que la fleur se fane ? Rallume-la et observe !
 
 > ❓ Est-ce que les transitions entre les états sont fluides ? Ajuste les pauses si besoin.
 
-## Étape 14 — Télécharger et tester
+## Étape 12 — Télécharger et tester
 
 💾 Envoie ton programme sur le micro:bit !
 
@@ -395,7 +322,7 @@ graine()
 
 ➡️ Approche ta main au-dessus du micro:bit pour créer de l'ombre — la fleur se fane ! Éloigne-la — elle refleurit !
 
-## Étape 15 — Question réflexive 🤔
+## Étape 13 — Question réflexive 🤔
 
 ❓ **Le capteur de lumière du micro:bit n'est pas une vraie pièce séparée — comment fonctionne-t-il selon toi ?**
 
@@ -403,7 +330,7 @@ graine()
 
 > 💡 Le micro:bit utilise ses LEDs comme **capteur** en les faisant alterner rapidement entre affichage et lecture. C'est le même composant qui joue deux rôles — un exemple brillant de réutilisation !
 
-## Étape 16 — Défi de base 🧠
+## Étape 14 — Défi de base 🧠
 
 ➡️ Crée une fonction `eclore` qui appelle `bourgeon`, puis `fleur`.
 
@@ -411,7 +338,7 @@ graine()
 
 > ❓ La transition est-elle plus naturelle qu'un passage direct à la floraison ?
 
-## Étape 17 — Défi avancé 🧠
+## Étape 15 — Défi avancé 🧠
 
 ➡️ Remets le bloc ``||basic:toujours||`` dans ton programme.
 
@@ -427,7 +354,7 @@ function bourgeon() {
     basic.showLeds(`
         . . # . .
         . # # # .
-        . . # . .
+        . # # # .
         . . # . .
         . . # . .
         `)
