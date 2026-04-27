@@ -314,42 +314,17 @@ graine()
 
 > ❓ Est-ce que les transitions entre les états sont fluides ? Ajuste les pauses si besoin.
 
-## Étape 12 — Télécharger et tester
-
-💾 Envoie ton programme sur le micro:bit !
-
-➡️ Clique sur le bouton **Télécharger** pour transférer ton programme.
-
-➡️ Approche ta main au-dessus du micro:bit pour créer de l'ombre — la fleur se fane ! Éloigne-la — elle refleurit !
-
-## Étape 13 — Question réflexive 🤔
-
-❓ **Le capteur de lumière du micro:bit n'est pas une vraie pièce séparée — comment fonctionne-t-il selon toi ?**
-
-❓ **Si tu voulais que la fleur passe par le bourgeon avant d'éclore quand la lumière revient, que changerais-tu dans le bloc ``||input:lorsque (lumineux)||`` ?**
-
-> 💡 Le micro:bit utilise ses LEDs comme **capteur** en les faisant alterner rapidement entre affichage et lecture. C'est le même composant qui joue deux rôles — un exemple brillant de réutilisation !
-
-## Étape 14 — Défi de base 🧠
-
-➡️ Crée une fonction `eclore` qui appelle `bourgeon`, puis `fleur`.
-
-➡️ Utilise-la à la place de `fleur` dans le bloc ``||input:lorsque (lumineux)||`` — la fleur passe maintenant par le bourgeon avant d'éclore !
-
-> ❓ La transition est-elle plus naturelle qu'un passage direct à la floraison ?
-
-## Étape 15 — Défi avancé 🧠
-
-➡️ Remets le bloc ``||basic:toujours||`` dans ton programme.
-
-➡️ À l'intérieur, place un bloc ``||logic:si/sinon||`` qui lit ``||input:niveau de lumière||`` :
-- Si la lumière est **supérieure à 150** → appelle `fleur`
-- Sinon si la lumière est **supérieure à 75** → appelle `bourgeon`
-- Sinon → appelle `fanee`
-
-➡️ Ajoute une ``||basic:pause (ms) 500||`` à la fin de la boucle.
-
 ```blocks
+function graine() {
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . # . .
+        . # # # .
+        `)
+    basic.pause(500)
+}
 function bourgeon() {
     basic.showLeds(`
         . . # . .
@@ -380,11 +355,113 @@ function fanee() {
         `)
     basic.pause(500)
 }
+function cycle_vie() {
+    graine()
+    bourgeon()
+    fleur()
+}
+input.onLightConditionChanged(LightCondition.Dark, function () {
+    fanee()
+})
+input.onLightConditionChanged(LightCondition.Bright, function () {
+    fleur()
+})
+input.onButtonPressed(Button.A, function () {
+    cycle_vie()
+})
+input.onButtonPressed(Button.B, function () {
+    fanee()
+})
+graine()
+```
+
+## Étape 12 — Télécharger et tester
+
+💾 Envoie ton programme sur le micro:bit !
+
+➡️ Clique sur le bouton **Télécharger** pour transférer ton programme.
+
+➡️ Approche ta main au-dessus du micro:bit pour créer de l'ombre — la fleur se fane ! Éloigne-la — elle refleurit !
+
+## Étape 13 — Question réflexive 🤔
+
+❓ **Le capteur de lumière du micro:bit n'est pas une vraie pièce séparée — comment fonctionne-t-il selon toi ?**
+
+❓ **Si tu voulais que la fleur passe par le bourgeon avant d'éclore quand la lumière revient, que changerais-tu dans le bloc ``||input:lorsque (lumineux)||`` ?**
+
+> 💡 Le micro:bit utilise ses LEDs comme **capteur** en les faisant alterner rapidement entre affichage et lecture. C'est le même composant qui joue deux rôles — un exemple brillant de réutilisation !
+
+## Étape 14 — Défi de base 🧠
+
+➡️ Crée une fonction `eclore` qui appelle `bourgeon`, puis `fleur`.
+
+➡️ Utilise-la à la place de `fleur` dans le bloc ``||input:lorsque (lumineux)||`` — la fleur passe maintenant par le bourgeon avant d'éclore !
+
+> ❓ La transition est-elle plus naturelle qu'un passage direct à la floraison ?
+
+## Étape 15 — Défi avancé 🧠
+
+➡️ Remets le bloc ``||basic:toujours||`` dans ton programme.
+
+➡️ Crée une variable `lumiere` qui convertit le capteur en **pourcentage** : ``||input:niveau de lumière||`` × 100 ÷ 255.
+
+➡️ Place un bloc ``||logic:si/sinon||`` :
+- Si `lumiere` est **inférieure à 40** → appelle `cycle_vie` (la fleur grandit dans l'ombre)
+- Sinon → appelle `fanee` (trop de lumière, la fleur se fane)
+
+➡️ Ajoute une ``||basic:pause (ms) 500||`` à la fin de la boucle.
+
+```blocks
+function graine() {
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . # . .
+        . # # # .
+        `)
+    basic.pause(500)
+}
+function bourgeon() {
+    basic.showLeds(`
+        . . # . .
+        . # # # .
+        . # # # .
+        . . # . .
+        . . # . .
+        `)
+    basic.pause(500)
+}
+function fleur() {
+    basic.showLeds(`
+        . # . # .
+        # # # # #
+        . # # # .
+        . . # . .
+        . . # . .
+        `)
+    basic.pause(500)
+}
+function fanee() {
+    basic.showLeds(`
+        . # # . .
+        # . # . .
+        . . # . .
+        . . # . .
+        . . # . .
+        `)
+    basic.pause(500)
+}
+function cycle_vie() {
+    graine()
+    bourgeon()
+    fleur()
+}
+let lumiere = 0
 basic.forever(function () {
-    if (input.lightLevel() > 150) {
-        fleur()
-    } else if (input.lightLevel() > 75) {
-        bourgeon()
+    lumiere = input.lightLevel() * 100 / 255
+    if (lumiere < 40) {
+        cycle_vie()
     } else {
         fanee()
     }
@@ -392,6 +469,6 @@ basic.forever(function () {
 })
 ```
 
-> ❓ Couvre progressivement le micro:bit — est-ce que la fleur passe bien par le bourgeon avant de faner complètement ?
+> ❓ Couvre le micro:bit avec ta main — est-ce que la fleur grandit dans l'ombre ? Découvre-le — est-ce qu'elle se fane à la lumière ?
 
 🚀 Bravo ! Tu as créé une fleur vivante qui réagit à son environnement — comme une vraie plante qui cherche la lumière !
