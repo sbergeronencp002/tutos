@@ -397,6 +397,36 @@ graine()
 
 ➡️ Utilise-la à la place de `fleur` dans le bloc ``||input:lorsque (lumineux)||`` — la fleur passe maintenant par le bourgeon avant d'éclore !
 
+```blocks
+function bourgeon() {
+    basic.showLeds(`
+        . . # . .
+        . # # # .
+        . # # # .
+        . . # . .
+        . . # . .
+        `)
+    basic.pause(500)
+}
+function fleur() {
+    basic.showLeds(`
+        . # . # .
+        # # # # #
+        . # # # .
+        . . # . .
+        . . # . .
+        `)
+    basic.pause(500)
+}
+function eclore() {
+    bourgeon()
+    fleur()
+}
+input.onLightConditionChanged(LightCondition.Bright, function () {
+    eclore()
+})
+```
+
 > ❓ La transition est-elle plus naturelle qu'un passage direct à la floraison ?
 
 ## Étape 15 — Défi avancé 🧠
