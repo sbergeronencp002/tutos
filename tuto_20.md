@@ -406,8 +406,8 @@ graine()
 ➡️ Crée une variable `lumiere` qui convertit le capteur en **pourcentage** : ``||input:niveau de lumière||`` × 100 ÷ 255.
 
 ➡️ Place un bloc ``||logic:si/sinon||`` :
-- Si `lumiere` est **inférieure à 40** → appelle `cycle_vie` (la fleur grandit dans l'ombre)
-- Sinon → appelle `fanee` (trop de lumière, la fleur se fane)
+- Si `lumiere` est **inférieure à 40** → appelle `fanee` (pas assez de lumière, la fleur se fane)
+- Sinon → appelle `cycle_vie` (assez de lumière, la fleur grandit)
 
 ➡️ Ajoute une ``||basic:pause (ms) 500||`` à la fin de la boucle.
 
@@ -461,14 +461,14 @@ let lumiere = 0
 basic.forever(function () {
     lumiere = input.lightLevel() * 100 / 255
     if (lumiere < 40) {
-        cycle_vie()
-    } else {
         fanee()
+    } else {
+        cycle_vie()
     }
     basic.pause(500)
 })
 ```
 
-> ❓ Couvre le micro:bit avec ta main — est-ce que la fleur grandit dans l'ombre ? Découvre-le — est-ce qu'elle se fane à la lumière ?
+> ❓ Couvre le micro:bit avec ta main — est-ce que la fleur se fane ? Découvre-le — est-ce qu'elle grandit à la lumière ?
 
 🚀 Bravo ! Tu as créé une fleur vivante qui réagit à son environnement — comme une vraie plante qui cherche la lumière !
