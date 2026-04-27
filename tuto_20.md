@@ -12,9 +12,9 @@ C'est parti ! 🚀
 
 🧹 Fais le ménage !
 
-➡️ Supprime le bloc ``||basic:toujours||``.
+➡️ Garde les deux blocs ``||basic:au démarrage||`` et ``||basic:toujours||``.
 
-> 💡 On garde le bloc ``||basic:au démarrage||`` — il affichera la graine dès l'allumage !
+> 💡 On utilise ``||basic:toujours||`` pour surveiller la lumière en continu — c'est son rôle dans ce tutoriel !
 
 ## Étape 2 — La fonction `graine`
 
@@ -160,11 +160,15 @@ function cycle_vie() {
 
 ☀️🌑 La fleur réagit automatiquement à la lumière !
 
-➡️ Glisse le bloc ``||input:lorsque (sombre)||`` dans l'espace de travail. À l'intérieur, appelle `fanee`.
+➡️ Dans le bloc ``||basic:toujours||``, place un bloc ``||logic:si/sinon||``.
 
-➡️ Glisse le bloc ``||input:lorsque (lumineux)||`` dans l'espace de travail. À l'intérieur, appelle `fleur`.
+➡️ Si ``||input:niveau de lumière||`` est **inférieur à 100** → appelle `fanee`.
 
-> 💡 Le micro:bit utilise ses LEDs comme **capteur de lumière** ! Couvre-le avec ta main — la fleur se fane. Découvre-le — elle refleurit ! C'est le même composant qui affiche et qui mesure.
+➡️ Sinon → appelle `fleur`.
+
+➡️ Ajoute une ``||basic:pause (ms) 300||`` à la fin de la boucle.
+
+> 💡 Le micro:bit mesure la lumière de 0 (obscurité totale) à 255 (plein soleil). Avec le seuil 100, la fleur se fane dans l'ombre et s'épanouit à la lumière !
 
 ```blocks
 function fleur() {
@@ -187,11 +191,13 @@ function fanee() {
         `)
     basic.pause(500)
 }
-input.onLightConditionChanged(LightCondition.Dark, function () {
-    fanee()
-})
-input.onLightConditionChanged(LightCondition.Bright, function () {
-    fleur()
+basic.forever(function () {
+    if (input.lightLevel() < 100) {
+        fanee()
+    } else {
+        fleur()
+    }
+    basic.pause(300)
 })
 ```
 
@@ -247,11 +253,13 @@ function cycle_vie() {
     bourgeon()
     fleur()
 }
-input.onLightConditionChanged(LightCondition.Dark, function () {
-    fanee()
-})
-input.onLightConditionChanged(LightCondition.Bright, function () {
-    fleur()
+basic.forever(function () {
+    if (input.lightLevel() < 100) {
+        fanee()
+    } else {
+        fleur()
+    }
+    basic.pause(300)
 })
 input.onButtonPressed(Button.A, function () {
     cycle_vie()
@@ -310,7 +318,7 @@ graine()
 
 ➡️ Appuie sur **A** — le cycle de vie complet. Sur **B** — la fleur se fane.
 
-➡️ Clique sur l'ampoule 💡 du simulateur pour simuler l'obscurité — est-ce que la fleur se fane ? Rallume-la et observe !
+➡️ Couvre l'écran du simulateur avec ta souris pour simuler l'obscurité — est-ce que la fleur se fane ? Découvre-le — elle refleurit !
 
 > ❓ Est-ce que les transitions entre les états sont fluides ? Ajuste les pauses si besoin.
 
@@ -360,11 +368,13 @@ function cycle_vie() {
     bourgeon()
     fleur()
 }
-input.onLightConditionChanged(LightCondition.Dark, function () {
-    fanee()
-})
-input.onLightConditionChanged(LightCondition.Bright, function () {
-    fleur()
+basic.forever(function () {
+    if (input.lightLevel() < 100) {
+        fanee()
+    } else {
+        fleur()
+    }
+    basic.pause(300)
 })
 input.onButtonPressed(Button.A, function () {
     cycle_vie()
@@ -385,17 +395,17 @@ graine()
 
 ## Étape 13 — Question réflexive 🤔
 
-❓ **Le capteur de lumière du micro:bit n'est pas une vraie pièce séparée — comment fonctionne-t-il selon toi ?**
+❓ **Le capteur de lumière du micro:bit retourne une valeur entre 0 et 255. Qu'est-ce que ça représente ?**
 
-❓ **Si tu voulais que la fleur passe par le bourgeon avant d'éclore quand la lumière revient, que changerais-tu dans le bloc ``||input:lorsque (lumineux)||`` ?**
+❓ **Si tu voulais que la fleur soit plus sensible à l'ombre, augmenterais-tu ou diminuerais-tu la valeur 100 ?**
 
-> 💡 Le micro:bit utilise ses LEDs comme **capteur** en les faisant alterner rapidement entre affichage et lecture. C'est le même composant qui joue deux rôles — un exemple brillant de réutilisation !
+> 💡 Le micro:bit utilise ses LEDs comme **capteur** en les faisant alterner rapidement entre affichage et lecture. Plus la valeur est haute, plus c'est lumineux. Changer le seuil de 100 permet de régler la sensibilité de ta fleur !
 
 ## Étape 14 — Défi de base 🧠
 
 ➡️ Crée une fonction `eclore` qui appelle `bourgeon`, puis `fleur`.
 
-➡️ Utilise-la à la place de `fleur` dans le bloc ``||input:lorsque (lumineux)||`` — la fleur passe maintenant par le bourgeon avant d'éclore !
+➡️ Utilise-la à la place de `fleur` dans le bloc ``||basic:toujours||`` — la fleur passe maintenant par le bourgeon avant d'éclore !
 
 ```blocks
 function bourgeon() {
@@ -418,12 +428,27 @@ function fleur() {
         `)
     basic.pause(500)
 }
+function fanee() {
+    basic.showLeds(`
+        . # # . .
+        # . # . .
+        . . # . .
+        . . # . .
+        . . # . .
+        `)
+    basic.pause(500)
+}
 function eclore() {
     bourgeon()
     fleur()
 }
-input.onLightConditionChanged(LightCondition.Bright, function () {
-    eclore()
+basic.forever(function () {
+    if (input.lightLevel() < 100) {
+        fanee()
+    } else {
+        eclore()
+    }
+    basic.pause(300)
 })
 ```
 
@@ -431,15 +456,9 @@ input.onLightConditionChanged(LightCondition.Bright, function () {
 
 ## Étape 15 — Défi avancé 🧠
 
-➡️ Remets le bloc ``||basic:toujours||`` dans ton programme.
+➡️ Modifie le bloc ``||basic:toujours||`` pour convertir le capteur en **pourcentage** : crée une variable `lumiere` égale à ``||input:niveau de lumière||`` × 100 ÷ 255.
 
-➡️ Crée une variable `lumiere` qui convertit le capteur en **pourcentage** : ``||input:niveau de lumière||`` × 100 ÷ 255.
-
-➡️ Place un bloc ``||logic:si/sinon||`` :
-- Si `lumiere` est **inférieure à 40** → appelle `fanee` (pas assez de lumière, la fleur se fane)
-- Sinon → appelle `cycle_vie` (assez de lumière, la fleur grandit)
-
-➡️ Ajoute une ``||basic:pause (ms) 500||`` à la fin de la boucle.
+➡️ Change le seuil : si `lumiere` est **inférieure à 40** → appelle `fanee`, sinon → appelle `cycle_vie`.
 
 ```blocks
 function graine() {
